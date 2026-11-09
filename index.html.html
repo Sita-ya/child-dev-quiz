@@ -1,0 +1,4606 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>兒童發展刷題｜第1～7章期中考</title>
+<style>
+:root{--bg:#FFFCF6;--ink:#3E3A39;--card:#FFFFFF;--coral:#F2A497;--sky:#A8D3E6;--mint:#B9DAA5;--yel:#F6D27A;--soft:#F6F0E4;--bad:#E58B7B;--ok:#8FC47A}
+[data-theme=dark]{--bg:#2B2826;--ink:#F1EBDD;--card:#37332F;--coral:#C97F72;--sky:#6E9CB3;--mint:#7FA56E;--yel:#C4A054;--soft:#403B36;--bad:#D07463;--ok:#6FA45C}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Huninn","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.75;font-size:17px}
+.wrap{max-width:860px;margin:0 auto;padding:18px 14px 80px}
+header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+h1{font-size:26px;margin:0}
+h2{font-size:20px;margin:0 0 10px}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:26px;padding:18px 20px;margin:14px 0;box-shadow:5px 5px 0 var(--ink)}
+.card.c1{background:color-mix(in srgb,var(--sky) 45%,var(--card))}
+.card.c2{background:color-mix(in srgb,var(--mint) 45%,var(--card))}
+.card.c3{background:color-mix(in srgb,var(--yel) 45%,var(--card))}
+.card.c4{background:color-mix(in srgb,var(--coral) 40%,var(--card))}
+button,.btn{font:inherit;color:var(--ink);background:var(--yel);border:3px solid var(--ink);border-radius:999px;padding:7px 18px;cursor:pointer;box-shadow:3px 3px 0 var(--ink);transition:transform .08s}
+button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+button.sky{background:var(--sky)}button.mint{background:var(--mint)}button.coral{background:var(--coral)}button.ghost{background:var(--card)}
+button:disabled{opacity:.45;cursor:default}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:6px;border:2.5px solid var(--ink);border-radius:999px;padding:3px 14px;background:var(--card);cursor:pointer;user-select:none;font-size:15px}
+.chip.on{background:var(--mint)}
+.tag{display:inline-block;border:2px solid var(--ink);border-radius:999px;padding:0 10px;font-size:13px;margin:2px 4px 2px 0;background:var(--sky)}
+.tag.src{background:var(--yel)}.tag.warn{background:var(--coral)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.stat{border:2.5px solid var(--ink);border-radius:20px;padding:8px 12px;background:var(--card);text-align:center}
+.stat b{display:block;font-size:26px}
+.bar{height:14px;border:2.5px solid var(--ink);border-radius:99px;background:var(--card);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--mint)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+td,th{border-bottom:2px dashed var(--ink);padding:5px 6px;text-align:left}
+.opt{display:block;width:100%;text-align:left;margin:9px 0;border-radius:22px;background:var(--card);box-shadow:3px 3px 0 var(--ink);padding:10px 16px}
+.opt.sel{background:var(--sky)}
+.opt.right{background:var(--ok)}.opt.wrong{background:var(--bad)}
+.stem{font-size:19px;margin:6px 0 10px}
+.grp{background:var(--soft);border:2.5px dashed var(--ink);border-radius:18px;padding:10px 14px;margin:8px 0;white-space:pre-wrap;font-size:16px}
+.exp{background:var(--soft);border:2.5px solid var(--ink);border-radius:20px;padding:12px 16px;margin-top:12px;font-size:16px}
+.exp p{margin:6px 0}
+.exp .tip{background:var(--yel);border-radius:14px;padding:4px 12px;border:2px solid var(--ink)}
+select,input[type=number]{font:inherit;color:var(--ink);background:var(--card);border:2.5px solid var(--ink);border-radius:14px;padding:3px 8px}
+.timer{font-size:20px;font-weight:700}
+.muted{opacity:.7;font-size:14px}
+.nav{position:sticky;bottom:10px;display:flex;justify-content:space-between;gap:10px;margin-top:16px}
+@media(max-width:560px){body{font-size:16px}h1{font-size:22px}.card{padding:14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>📖 兒童發展刷題 <span class="muted">第1～7章</span></h1>
+<div class="row"><button class="ghost" onclick="go('home')">首頁</button><button class="ghost" id="thm">🌙 深色</button></div>
+</header>
+<div id="app"></div>
+</div>
+<script id="data" type="application/json">[
+ {
+  "year": "107",
+  "subject": "兒童發展與輔導",
+  "qno": "兒童發展例題1",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "下列哪一個腦區皮質細胞髓鞘化的時間最晚，直到青春期才完全包覆髓鞘？",
+  "group_text": "",
+  "options": [
+   "頂葉",
+   "額葉",
+   "顳葉",
+   "枕葉"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案（範例題內附）",
+  "concept": "大腦皮質四葉與髓鞘化順序",
+  "ref_file": "第四章三歲前的生理發展.pptx p.12-13；腦部組織與功能.docx；兒童發展整理.pdf",
+  "verified": true,
+  "note": "",
+  "src_label": "107 兒童發展與輔導 第兒童發展例題1題",
+  "id": "Q001",
+  "explanation": {
+   "right": "額葉（尤其前額葉）負責計畫、抑制、判斷等高階功能，是最晚成熟的腦區，髓鞘化持續到青春期甚至成年早期。",
+   "wrong": {
+    "A": "頂葉主管體感覺與空間，成熟時間早於額葉。",
+    "C": "顳葉主管聽覺、語言理解與記憶，成熟也早於額葉。",
+    "D": "枕葉主管視覺，是最早成熟的皮質區之一。"
+   },
+   "tip": "口訣：後（枕）先熟、前（額）最晚熟。"
+  },
+  "sources": [
+   {
+    "label": "107 兒童發展與輔導 第兒童發展例題1題",
+    "subject": "兒童發展與輔導",
+    "year": "107",
+    "qno": "兒童發展例題1"
+   }
+  ]
+ },
+ {
+  "year": "107",
+  "subject": "兒童發展與輔導",
+  "qno": "兒童發展例題2",
+  "chapter": [
+   2
+  ],
+  "stem": "小強下課時和同學嘻鬧，結果同學自己不小心受傷了，老師卻很生氣地責罰了小強，認為是他的錯。他覺得很委屈，卻又不敢為自己辯護。回家後就把怨氣發洩在弟弟身上。小強對弟弟的反應，是屬何種自我防衛機轉？",
+  "group_text": "",
+  "options": [
+   "投射作用",
+   "補償作用",
+   "內射作用",
+   "替代作用"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案（範例題內附）",
+  "concept": "佛洛伊德防衛機轉：替代（轉移）",
+  "ref_file": "第二章理論與研究 (1).pptx p.12-14",
+  "verified": true,
+  "note": "",
+  "src_label": "107 兒童發展與輔導 第兒童發展例題2題",
+  "id": "Q002",
+  "explanation": {
+   "right": "對老師不敢反擊，把怨氣轉移到更弱勢、更安全的弟弟身上，就是替代（displacement，又稱轉移）。",
+   "wrong": {
+    "A": "投射是把自己的不良念頭、衝動歸給別人（例如自己想作弊卻說別人想作弊）。",
+    "B": "補償是某方面有缺陷，改在另一方面求表現來彌補。",
+    "C": "內射是把外在的權威或他人的價值觀吸收成自己的，與「對弟弟出氣」無關。"
+   },
+   "tip": "被老闆罵→回家罵小孩＝替代；對象換了，情緒沒換。"
+  },
+  "sources": [
+   {
+    "label": "107 兒童發展與輔導 第兒童發展例題2題",
+    "subject": "兒童發展與輔導",
+    "year": "107",
+    "qno": "兒童發展例題2"
+   }
+  ]
+ },
+ {
+  "year": "107",
+  "subject": "兒童發展與輔導",
+  "qno": "兒童發展例題3-1",
+  "chapter": [
+   2,
+   5
+  ],
+  "stem": "小圓可獨立完成作業的程度，與在父母引導與鼓勵下可完成作業的程度，此二者之間的差異，就維高思基(L. Vygotsky)的觀點而言，稱為下列何者？",
+  "group_text": "小圓的暑假作業中，需要完成一份旅遊的圖文日記(有文字，有繪圖)。小圓看著這份作業，不知該如何著手。",
+  "options": [
+   "演繹推理",
+   "鷹架作用",
+   "表徵領悟",
+   "近側發展區"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案（範例題內附）",
+  "concept": "維高斯基：近側發展區（ZPD）",
+  "ref_file": "第二章理論與研究 (1).pptx p.49；統整 皮亞傑和維高斯基在語言發展的觀點.docx",
+  "verified": true,
+  "note": "題組第2小題（自傳式記憶）屬記憶類型，講義未涵蓋，未收錄。",
+  "src_label": "107 兒童發展與輔導 第兒童發展例題3-1題",
+  "id": "Q003",
+  "explanation": {
+   "right": "「獨立完成」與「有成人引導才能完成」之間的距離，就是近側發展區（ZPD）。",
+   "wrong": {
+    "A": "演繹推理是由一般原則推出個別結論，屬形式運思期的思考，與題幹無關。",
+    "B": "鷹架作用是成人在ZPD內所提供的支持與引導（行為），不是「兩種表現水準的差距」本身。",
+    "C": "表徵領悟是指理解一個物體可以代表另一個事物（如照片、模型），屬象徵能力。"
+   },
+   "tip": "ZPD＝差距（潛能區間）；鷹架＝幫忙的方式。"
+  },
+  "sources": [
+   {
+    "label": "107 兒童發展與輔導 第兒童發展例題3-1題",
+    "subject": "兒童發展與輔導",
+    "year": "107",
+    "qno": "兒童發展例題3-1"
+   }
+  ]
+ },
+ {
+  "year": "107",
+  "subject": "兒童發展與輔導",
+  "qno": "兒童輔導例題4",
+  "chapter": [
+   2
+  ],
+  "stem": "臺北發生了大眾運輸工具隨機殺人事件，住在高雄的小志現在搭車都會心生恐懼，缺乏安全感。就布朗芬布里納(U. Bronfenbrenner)的生態理論而言，此事件對小志的影響是來自下列哪一系統？",
+  "group_text": "",
+  "options": [
+   "大系統",
+   "中系統",
+   "內系統",
+   "微系統"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案（範例題內附）",
+  "concept": "布朗芬布列納生態系統理論",
+  "ref_file": "第二章理論與研究 (1).pptx p.52",
+  "verified": true,
+  "note": "題目收錄於「兒童輔導」部分，但考點為第2章的生態系統理論，故收錄。",
+  "src_label": "107 兒童發展與輔導 第兒童輔導例題4題",
+  "id": "Q004",
+  "explanation": {
+   "right": "社會事件與整體社會氛圍、文化價值、政經環境，屬於大系統（macrosystem）對個人的影響。小志並未親身參與這個事件，是社會環境氛圍透過媒體與文化影響他。",
+   "wrong": {
+    "B": "中系統是微系統之間的連結（例如親師溝通、家庭與學校的互動）。",
+    "C": "「內系統」不是布朗芬布列納理論的標準層次（標準層次為微、中、外、大、時間系統）。",
+    "D": "微系統是個人直接互動的環境（家庭、班級、同儕）。"
+   },
+   "tip": "微→中→外→大→時間，由近到遠；文化、媒體、社會氛圍＝大系統。"
+  },
+  "sources": [
+   {
+    "label": "107 兒童發展與輔導 第兒童輔導例題4題",
+    "subject": "兒童發展與輔導",
+    "year": "107",
+    "qno": "兒童輔導例題4"
+   }
+  ]
+ },
+ {
+  "year": "108-1",
+  "subject": "兒童發展與輔導",
+  "qno": "6",
+  "chapter": [
+   2
+  ],
+  "stem": "小華考試成績很差，卻經常對同學說：「老師出題太難、評分不公平。」依據精神分析學派的觀點，小華的行為是屬於下列何種防衛機轉？",
+  "group_text": "",
+  "options": [
+   "否認(denial)",
+   "投射(projection)",
+   "合理化(rationalization)",
+   "反向(reaction formation)"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "佛洛伊德防衛機轉：合理化",
+  "ref_file": "第二章理論與研究 (1).pptx p.12-14",
+  "verified": true,
+  "note": "",
+  "src_label": "108-1 兒童發展與輔導 第6題",
+  "id": "Q005",
+  "explanation": {
+   "right": "考試成績差卻說「老師出題太難、評分不公平」，是為失敗找一個看似合理的藉口，即合理化。",
+   "wrong": {
+    "A": "否認是拒絕承認事實存在（例如不承認自己考差）。",
+    "B": "投射是把自己的不良動機推給別人。",
+    "D": "反向是表現出和內心衝動相反的行為（討厭卻特別熱情）。"
+   },
+   "tip": "酸葡萄、甜檸檬＝合理化。"
+  },
+  "sources": [
+   {
+    "label": "108-1 兒童發展與輔導 第6題",
+    "subject": "兒童發展與輔導",
+    "year": "108-1",
+    "qno": "6"
+   }
+  ]
+ },
+ {
+  "year": "108-1",
+  "subject": "兒童發展與輔導",
+  "qno": "8",
+  "chapter": [
+   2,
+   5
+  ],
+  "stem": "心理學家維高思基(L. S. Vygotsky)認為七歲以後的兒童，能夠透過高層次心智運作進行自我引導式思考與溝通，這種現象稱為下列何者？",
+  "group_text": "",
+  "options": [
+   "內在語言(inner speech)",
+   "電報語言(telegraphic speech)",
+   "接收型語言(receptive speech)",
+   "自我中心語言(egocentric speech)"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "維高斯基：內在語言",
+  "ref_file": "第二章理論與研究 (1).pptx p.49；第五章三歲前的認知發展.pptx p.19-21",
+  "verified": true,
+  "note": "",
+  "src_label": "108-1 兒童發展與輔導 第8題",
+  "id": "Q006",
+  "explanation": {
+   "right": "維高斯基認為語言由社會語言→私我語言（約3~7歲）→內在語言（7歲以後）；內在語言是在心裡自我引導思考與溝通。",
+   "wrong": {
+    "B": "電報式語言是約18~24個月只用關鍵詞組成的簡短句。",
+    "C": "接收型語言是指「聽得懂」的語言理解能力。",
+    "D": "自我中心語言（皮亞傑用詞，維高斯基稱私我語言）約出現在3~7歲，說出聲、尚未內化。"
+   },
+   "tip": "社會語言→私語（出聲）→內在語言（無聲、7歲後）。"
+  },
+  "sources": [
+   {
+    "label": "108-1 兒童發展與輔導 第8題",
+    "subject": "兒童發展與輔導",
+    "year": "108-1",
+    "qno": "8"
+   }
+  ]
+ },
+ {
+  "year": "108-1",
+  "subject": "兒童發展與輔導",
+  "qno": "13",
+  "chapter": [
+   2,
+   7
+  ],
+  "stem": "根據皮亞傑(J. Piaget)的認知發展理論，兒童尋找問題答案時，如果可以忽略誤導的表象並且注意一個以上相關的面向，代表此兒童已具備下列何種現象的能力？",
+  "group_text": "",
+  "options": [
+   "可逆性",
+   "泛靈論",
+   "因果關係",
+   "去集中化"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：去集中化（前運思期→具體運思期）",
+  "ref_file": "第七章兒童期早期的生理與認知發展.pptx p.11-12",
+  "verified": true,
+  "note": "",
+  "src_label": "108-1 兒童發展與輔導 第13題",
+  "id": "Q007",
+  "explanation": {
+   "right": "能忽略誤導的表象，並同時注意一個以上相關面向，就是去集中化（decentration），是克服前運思期「知覺集中」的能力。",
+   "wrong": {
+    "A": "可逆性是在心理上把操作倒轉回原狀（如水倒回原杯），題幹重點不在此。",
+    "B": "泛靈論是把無生命物當成有生命，屬前運思期的思考特徵。",
+    "C": "因果關係的推理在前運思期尚不完整（橫跨式推理），與「同時注意多面向」無關。"
+   },
+   "tip": "集中化＝只看一面；去集中化＝多面兼顧。"
+  },
+  "sources": [
+   {
+    "label": "108-1 兒童發展與輔導 第13題",
+    "subject": "兒童發展與輔導",
+    "year": "108-1",
+    "qno": "13"
+   }
+  ]
+ },
+ {
+  "year": "108-1",
+  "subject": "兒童發展與輔導",
+  "qno": "18",
+  "chapter": [
+   1,
+   3
+  ],
+  "stem": "小澄與小清是同卵雙生，小澄自小比較愛笑，所以爸媽逗弄他比較多，長大後小澄比較喜歡發言、跟人互動，而小清則比較安靜。此現象最符合發展歷程中的哪一概念？",
+  "group_text": "",
+  "options": [
+   "利基選擇(niche-picking)",
+   "基因漸成作用(epigenesis)",
+   "基因環境交互作用(gene environment interaction)",
+   "非共同環境的影響(nonshared environmental influence)"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "非共同環境的影響（遺傳與環境）",
+  "ref_file": "第一章及教師檢定考試.pptx p.9；第四章三歲前的生理發展.pptx",
+  "verified": true,
+  "note": "",
+  "src_label": "108-1 兒童發展與輔導 第18題",
+  "id": "Q008",
+  "explanation": {
+   "right": "同卵雙生基因相同，卻因小澄愛笑、父母逗弄較多而得到不同的對待與經驗；同一家庭中手足經驗的差異，稱為非共同環境（nonshared environment）的影響。公告答案為(D)。",
+   "wrong": {
+    "A": "利基選擇是兒童依自己的基因傾向主動挑選、創造適合自己的環境；題幹重點是「父母因他愛笑而多逗弄」，是環境的不同對待。",
+    "B": "基因漸成作用是環境因素改變基因的表現方式，題幹未涉及。",
+    "C": "基因環境交互作用是基因與環境共同影響發展的總稱，範圍過廣；題幹最突出的是同家庭中兩人所受環境不同。"
+   },
+   "tip": "同家庭≠同環境：手足各自有一套專屬環境＝非共同環境。"
+  },
+  "sources": [
+   {
+    "label": "108-1 兒童發展與輔導 第18題",
+    "subject": "兒童發展與輔導",
+    "year": "108-1",
+    "qno": "18"
+   }
+  ]
+ },
+ {
+  "year": "108-1",
+  "subject": "兒童發展與輔導",
+  "qno": "21",
+  "chapter": [
+   5,
+   7
+  ],
+  "stem": "八歲的小欣聽到三歲的弟弟指著小狗說：「跳舞可愛」時，馬上回應弟弟：「對！ 狗狗跳舞很可愛」。小欣修正弟弟語言表達的方式，稱為下列何者？",
+  "group_text": "",
+  "options": [
+   "重述(recast)",
+   "擴張(expansion)",
+   "句法提攜(syntactic bootstrapping)",
+   "語義提攜(semantic bootstrapping)"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "語言發展：擴張（成人回應兒童語言）",
+  "ref_file": "第七章兒童期早期的生理與認知發展.pptx p.28",
+  "verified": true,
+  "note": "",
+  "src_label": "108-1 兒童發展與輔導 第21題",
+  "id": "Q009",
+  "explanation": {
+   "right": "弟弟說「跳舞可愛」，語句破碎、概念不完整，小欣把它補成完整句「狗狗跳舞很可愛」，這是擴張（expansion）。",
+   "wrong": {
+    "A": "重述（recast）是用不同句型重說孩子的話（例如把陳述改成問句或更正語法），並非補足缺漏成分。",
+    "C": "句法提攜是兒童用已知的句法線索推測新詞的意義。",
+    "D": "語義提攜是兒童從詞語的意義去推測句法結構或詞類。"
+   },
+   "tip": "擴張＝把破碎的話補完整；句法/語義提攜是兒童自己的推詞技巧。"
+  },
+  "sources": [
+   {
+    "label": "108-1 兒童發展與輔導 第21題",
+    "subject": "兒童發展與輔導",
+    "year": "108-1",
+    "qno": "21"
+   }
+  ]
+ },
+ {
+  "year": "108-1",
+  "subject": "兒童發展與輔導",
+  "qno": "26",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "國小六年級的小安一直還記得在幼兒園放學回家時，在巷口被一隻黑狗猛叫窮追，因此他每到巷口時就感到害怕，產生「一朝被蛇咬、十年怕草繩」的現象。小安的反應與下列哪些腦區的功能最相關？",
+  "group_text": "",
+  "options": [
+   "松果體",
+   "腦下垂體",
+   "視丘與下視丘",
+   "海馬迴與杏仁核"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "海馬迴與杏仁核：恐懼記憶",
+  "ref_file": "杏仁核.pptx；海馬迴.pptx；邊緣系統.pptx；第四章三歲前的生理發展.pptx p.17",
+  "verified": true,
+  "note": "",
+  "src_label": "108-1 兒童發展與輔導 第26題",
+  "id": "Q010",
+  "explanation": {
+   "right": "被黑狗追的恐懼經驗：杏仁核負責恐懼等情緒反應，海馬迴負責把經驗形成記憶，兩者共同造成「一朝被蛇咬、十年怕草繩」。",
+   "wrong": {
+    "A": "松果體分泌褪黑激素，調節睡眠週期。",
+    "B": "腦下垂體是內分泌系統的主腺，分泌各種激素。",
+    "C": "視丘是感覺訊息中繼站，下視丘調節體溫、攝食、內分泌與自律神經，與恐懼記憶不是主要關聯。"
+   },
+   "tip": "海馬迴＝記事件，杏仁核＝記害怕。"
+  },
+  "sources": [
+   {
+    "label": "108-1 兒童發展與輔導 第26題",
+    "subject": "兒童發展與輔導",
+    "year": "108-1",
+    "qno": "26"
+   }
+  ]
+ },
+ {
+  "year": "108-1",
+  "subject": "兒童發展與輔導",
+  "qno": "30",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "小方的表現與大腦中哪一區塊的功能關係最密切？",
+  "group_text": "十歲的小方收下自己不喜歡的生日禮物後，即使並不開心，仍微笑著向對方道謝。",
+  "options": [
+   "頂葉",
+   "枕葉",
+   "額葉",
+   "顳葉"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "額葉（前額葉）與情緒調節",
+  "ref_file": "第四章三歲前的生理發展.pptx p.12-13；兒童發展_腦部考古題(無解答版).pptx",
+  "verified": true,
+  "note": "題組第29題（情緒調節能力）屬第8章以後，未收錄；僅收第30題腦區題。",
+  "src_label": "108-1 兒童發展與輔導 第30題",
+  "id": "Q011",
+  "explanation": {
+   "right": "收下不喜歡的禮物仍微笑道謝，需要抑制真實情緒、符合社會期待，屬額葉（前額葉）的執行與調節功能。",
+   "wrong": {
+    "A": "頂葉主管體感覺與空間知覺。",
+    "B": "枕葉主管視覺處理。",
+    "D": "顳葉主管聽覺、語言理解與記憶。"
+   },
+   "tip": "額葉＝大腦總裁：計畫、抑制、情緒調節。"
+  },
+  "sources": [
+   {
+    "label": "108-1 兒童發展與輔導 第30題",
+    "subject": "兒童發展與輔導",
+    "year": "108-1",
+    "qno": "30"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "兒童發展與輔導",
+  "qno": "2",
+  "chapter": [
+   2,
+   7
+  ],
+  "stem": "根據皮亞傑(J. Piaget)的理論，兒童在具體運思期的認知特徵是下列哪一項？",
+  "group_text": "",
+  "options": [
+   "推理思考",
+   "萬物有靈",
+   "欠缺可逆性",
+   "自我中心語言"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：具體運思期特徵",
+  "ref_file": "第二章理論與研究 (1).pptx p.47",
+  "verified": true,
+  "note": "",
+  "src_label": "108-2 兒童發展與輔導 第2題",
+  "id": "Q012",
+  "explanation": {
+   "right": "具體運思期（約7~11歲）的兒童能對具體事物做合邏輯的推理思考，並具備守恆、可逆性、分類與序列化。",
+   "wrong": {
+    "B": "萬物有靈（泛靈論）是前運思期的特徵。",
+    "C": "欠缺可逆性是前運思期的特徵；具體運思期已具備可逆性。",
+    "D": "自我中心語言（私語）主要出現在前運思期。"
+   },
+   "tip": "前運思期「欠缺」，具體運思期「有」：可逆、守恆、去集中。"
+  },
+  "sources": [
+   {
+    "label": "108-2 兒童發展與輔導 第2題",
+    "subject": "兒童發展與輔導",
+    "year": "108-2",
+    "qno": "2"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "兒童發展與輔導",
+  "qno": "3",
+  "chapter": [
+   2
+  ],
+  "stem": "小青的家境不好，常常讓她覺得自己不如同學，她很努力唸書，希望獲得好成績，得到老師和同學的肯定。這是屬於下列何種防衛機轉？",
+  "group_text": "",
+  "options": [
+   "否認",
+   "補償",
+   "替代",
+   "反向"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "佛洛伊德防衛機轉：補償",
+  "ref_file": "第二章理論與研究 (1).pptx p.14",
+  "verified": true,
+  "note": "",
+  "src_label": "108-2 兒童發展與輔導 第3題",
+  "id": "Q013",
+  "explanation": {
+   "right": "家境不好、自覺不如人，便努力用功求好成績來獲得肯定，是以另一方面的成就彌補自卑感，即補償。",
+   "wrong": {
+    "A": "否認是拒絕承認事實。",
+    "C": "替代是把情緒或衝動轉到另一個對象。",
+    "D": "反向是表現出與內心相反的行為。"
+   },
+   "tip": "這裡弱，那裡補＝補償。"
+  },
+  "sources": [
+   {
+    "label": "108-2 兒童發展與輔導 第3題",
+    "subject": "兒童發展與輔導",
+    "year": "108-2",
+    "qno": "3"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "兒童發展與輔導",
+  "qno": "8",
+  "chapter": [
+   2
+  ],
+  "stem": "依據佛洛依德(S. Freud)的理論，人類的所有行為皆是由哪些驅力所產生？",
+  "group_text": "",
+  "options": [
+   "性與固著",
+   "性與攻擊",
+   "固著與攻擊",
+   "壓抑與慾力"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "佛洛伊德：本能驅力（性與攻擊）",
+  "ref_file": "第二章理論與研究 (1).pptx p.8-10",
+  "verified": true,
+  "note": "",
+  "src_label": "108-2 兒童發展與輔導 第8題",
+  "id": "Q014",
+  "explanation": {
+   "right": "佛洛伊德認為人類行為由兩大本能驅力產生：性驅力（生的本能、慾力）與攻擊驅力（死的本能）。",
+   "wrong": {
+    "A": "固著是發展停滯在某一性心理階段，不是驅力。",
+    "C": "固著、攻擊並列錯誤，固著不是驅力。",
+    "D": "壓抑是防衛機制，慾力是性本能的能量，兩者都不是兩大驅力的名稱。"
+   },
+   "tip": "驅力兩大：性＋攻擊。"
+  },
+  "sources": [
+   {
+    "label": "108-2 兒童發展與輔導 第8題",
+    "subject": "兒童發展與輔導",
+    "year": "108-2",
+    "qno": "8"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "兒童發展與輔導",
+  "qno": "10",
+  "chapter": [
+   2
+  ],
+  "stem": "學生在課堂上搗亂，藉以引起老師的關注。如果老師予以忽略，就可以降低學生下次在課堂搗亂的動機。試問老師是運用下列何種行為改變的策略？",
+  "group_text": "",
+  "options": [
+   "消弱",
+   "懲罰",
+   "正增強",
+   "負增強"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "操作制約：消弱",
+  "ref_file": "第二章理論與研究 (1).pptx p.26；增強方式與處罰例子說明1121004.docx",
+  "verified": true,
+  "note": "",
+  "src_label": "108-2 兒童發展與輔導 第10題",
+  "id": "Q015",
+  "explanation": {
+   "right": "老師忽略（不再給予注意這個增強物），使搗亂行為逐漸減少，這是消弱（extinction）。",
+   "wrong": {
+    "B": "懲罰是施予厭惡刺激或移除喜好的東西來減少行為，題目中老師並未處罰。",
+    "C": "正增強是給予喜愛的刺激以增加行為。",
+    "D": "負增強是移除厭惡刺激以增加行為。"
+   },
+   "tip": "不理它＝停止強化＝消弱。"
+  },
+  "sources": [
+   {
+    "label": "108-2 兒童發展與輔導 第10題",
+    "subject": "兒童發展與輔導",
+    "year": "108-2",
+    "qno": "10"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "兒童發展與輔導",
+  "qno": "12",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "小志的身高異乎一般學童，甚至疑似巨人症。導致這種異常發育現象的主要原因，可能是小志的哪個內分泌腺失調所致？",
+  "group_text": "",
+  "options": [
+   "性腺",
+   "腎上腺",
+   "松果腺",
+   "腦下腺"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "腦下腺（垂體）與生長激素",
+  "ref_file": "視丘和下視丘.pptx；第四章三歲前的生理發展.pptx",
+  "verified": true,
+  "note": "內分泌系統列於教檢應試內容的生理範圍，講義僅在視丘/下視丘簡報中提到腦下垂體。",
+  "src_label": "108-2 兒童發展與輔導 第12題",
+  "id": "Q016",
+  "explanation": {
+   "right": "巨人症是生長激素分泌過多所致，生長激素由腦下腺（腦下垂體）分泌。",
+   "wrong": {
+    "A": "性腺分泌性荷爾蒙，與青春期性成熟有關。",
+    "B": "腎上腺分泌腎上腺素、皮質醇等壓力荷爾蒙。",
+    "C": "松果腺分泌褪黑激素，調節睡眠。"
+   },
+   "tip": "身高失控找「垂體」。"
+  },
+  "sources": [
+   {
+    "label": "108-2 兒童發展與輔導 第12題",
+    "subject": "兒童發展與輔導",
+    "year": "108-2",
+    "qno": "12"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "兒童發展與輔導",
+  "qno": "13",
+  "chapter": [
+   2
+  ],
+  "stem": "四年級的小薇上臺做口頭報告時，都會因過度緊張而說不出話來。老師為了幫助她克服焦慮，就請小薇從上臺跟同學點頭微笑開始，然後進一步上臺說一句話，逐漸增加報告長度，做到後給予鼓勵。老師的作法是運用下列何種諮商學派？",
+  "group_text": "",
+  "options": [
+   "行為學派",
+   "阿德勒學派",
+   "個人中心學派",
+   "心理分析學派"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "行為學派：系統減敏／逐步養成",
+  "ref_file": "反制約及系統減敏法.pptx；第二章理論與研究 (1).pptx p.24-28",
+  "verified": true,
+  "note": "",
+  "src_label": "108-2 兒童發展與輔導 第13題",
+  "id": "Q017",
+  "explanation": {
+   "right": "從點頭微笑開始，逐步增加到說一句話、延長報告，並在做到後給予鼓勵，是行為學派的逐步減敏與行為塑造。",
+   "wrong": {
+    "B": "阿德勒學派重視自卑、生活風格與社會興趣。",
+    "C": "個人中心學派重視同理、接納與無條件積極關注。",
+    "D": "心理分析學派重視潛意識與早期經驗。"
+   },
+   "tip": "階層漸進＋放鬆／增強＝行為取向。"
+  },
+  "sources": [
+   {
+    "label": "108-2 兒童發展與輔導 第13題",
+    "subject": "兒童發展與輔導",
+    "year": "108-2",
+    "qno": "13"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "兒童發展與輔導",
+  "qno": "20",
+  "chapter": [
+   2
+  ],
+  "stem": "五年級的小雄經常不寫功課，被父母、師長責罵，也常遭同學譏笑，造成他不喜歡上學讀書。依據艾瑞克森(E. Erikson)的心理社會發展理論，小雄目前的發展危機是下列何者？",
+  "group_text": "",
+  "options": [
+   "罪惡感",
+   "自貶自卑",
+   "退縮愧疚",
+   "角色混淆"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "艾瑞克森：勤奮進取 vs. 自貶自卑",
+  "ref_file": "第二章理論與研究 (1).pptx p.17-18",
+  "verified": true,
+  "note": "",
+  "src_label": "108-2 兒童發展與輔導 第20題",
+  "id": "Q018",
+  "explanation": {
+   "right": "國小階段（約6歲~青春期）的核心危機是勤奮進取 vs. 自貶自卑；小雄常被責罵譏笑，容易形成自卑。",
+   "wrong": {
+    "A": "罪惡感屬3~6歲「自動自發 vs. 內疚」。",
+    "C": "退縮愧疚屬3~6歲階段的另一種譯法（自動自發 vs. 退縮愧疚）。",
+    "D": "角色混淆屬青春期「自我統合 vs. 角色混淆」。"
+   },
+   "tip": "6~12歲＝勤奮 vs. 自卑。"
+  },
+  "sources": [
+   {
+    "label": "108-2 兒童發展與輔導 第20題",
+    "subject": "兒童發展與輔導",
+    "year": "108-2",
+    "qno": "20"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "兒童發展與輔導",
+  "qno": "22",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "張老師發現三年級的小翔維持注意的能力不佳。從神經學的角度，可能是下列哪一個區域尚未發展完備？",
+  "group_text": "",
+  "options": [
+   "杏仁核(amygdala)",
+   "海馬迴(hippocampus)",
+   "下視丘(hypothalamus)",
+   "網狀結構(reticular formation)"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "網狀結構：注意力與警覺",
+  "ref_file": "網狀結構.pptx",
+  "verified": true,
+  "note": "",
+  "src_label": "108-2 兒童發展與輔導 第22題",
+  "id": "Q019",
+  "explanation": {
+   "right": "網狀結構負責維持清醒、警覺與選擇性注意，若尚未發展完備，注意力維持會不佳。",
+   "wrong": {
+    "A": "杏仁核主管恐懼等情緒反應。",
+    "B": "海馬迴主管新記憶的形成。",
+    "C": "下視丘調節體溫、攝食、內分泌與自律神經。"
+   },
+   "tip": "網狀＝網住注意力，管清醒與警覺。"
+  },
+  "sources": [
+   {
+    "label": "108-2 兒童發展與輔導 第22題",
+    "subject": "兒童發展與輔導",
+    "year": "108-2",
+    "qno": "22"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "兒童發展與輔導",
+  "qno": "3",
+  "chapter": [
+   2
+  ],
+  "stem": "小明上課吵鬧不停，老師不准他下課時間到教室外面玩。爾後要求他安靜上課，若小明不再吵鬧就取消他不准出去玩的禁令，此時老師主要是運用下列何種策略？",
+  "group_text": "",
+  "options": [
+   "負增強",
+   "正增強",
+   "消弱",
+   "懲罰"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "操作制約：負增強",
+  "ref_file": "增強方式與處罰例子說明1121004.docx；第二章理論與研究 (1).pptx p.32-35",
+  "verified": true,
+  "note": "",
+  "src_label": "109 兒童發展與輔導 第3題",
+  "id": "Q020",
+  "explanation": {
+   "right": "先禁止出去玩，之後以「安靜上課」為條件取消禁令，是移除厭惡刺激來增加安靜行為，即負增強。",
+   "wrong": {
+    "B": "正增強是「給予」喜愛的刺激。",
+    "C": "消弱是不再給增強物使行為減少。",
+    "D": "懲罰是為了減少行為，這裡目的是增加安靜行為。"
+   },
+   "tip": "負增強不是處罰：移走討厭的東西，好行為變多。"
+  },
+  "sources": [
+   {
+    "label": "109 兒童發展與輔導 第3題",
+    "subject": "兒童發展與輔導",
+    "year": "109",
+    "qno": "3"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "兒童發展與輔導",
+  "qno": "8",
+  "chapter": [
+   1
+  ],
+  "stem": "張老師發現，近年來入學新生中學業成就較高的兒童，多半來自於高社經地位家庭，或是父母比較願意投入資源在教育上的家庭。此發現最符合下列何項說明？",
+  "group_text": "",
+  "options": [
+   "環境的確會影響學業成就",
+   "基因決定兒童的學業成就表現",
+   "學業成就和遺傳間的關係不大",
+   "學業成就和社經地位有高度負相關"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "影響發展的因素：環境",
+  "ref_file": "第一章及教師檢定考試.pptx p.9-12",
+  "verified": true,
+  "note": "",
+  "src_label": "109 兒童發展與輔導 第8題",
+  "id": "Q021",
+  "explanation": {
+   "right": "高成就兒童多來自高社經、父母肯投入教育資源的家庭，顯示環境確實影響學業成就。",
+   "wrong": {
+    "B": "基因並非唯一決定因素，題幹證據是家庭環境。",
+    "C": "學業成就與遺傳並非「關係不大」，題幹無法推出此結論。",
+    "D": "社經地位與學業成就多為正相關，不是高度負相關。"
+   },
+   "tip": "社經高→資源多→成就高：正相關。"
+  },
+  "sources": [
+   {
+    "label": "109 兒童發展與輔導 第8題",
+    "subject": "兒童發展與輔導",
+    "year": "109",
+    "qno": "8"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "兒童發展與輔導",
+  "qno": "10",
+  "chapter": [
+   2
+  ],
+  "stem": "根據班度拉(A. Bandura)的交互決定論(reciprocal determinism)，探討行為必須了解以下哪三者的交互影響？",
+  "group_text": "",
+  "options": [
+   "個人、行為與環境",
+   "遺傳、文化與行為",
+   "個人、歷史與行為",
+   "行為、歷史與環境"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "班杜拉：交互決定論",
+  "ref_file": "第二章理論與研究 (1).pptx p.40",
+  "verified": true,
+  "note": "",
+  "src_label": "109 兒童發展與輔導 第10題",
+  "id": "Q022",
+  "explanation": {
+   "right": "班杜拉的交互決定論主張個人（認知、信念）、行為與環境三者彼此雙向影響。",
+   "wrong": {
+    "B": "遺傳、文化不是該理論的三要素。",
+    "C": "歷史不是該理論的要素。",
+    "D": "歷史、環境非三要素。"
+   },
+   "tip": "個人－行為－環境三角互動。"
+  },
+  "sources": [
+   {
+    "label": "109 兒童發展與輔導 第10題",
+    "subject": "兒童發展與輔導",
+    "year": "109",
+    "qno": "10"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "兒童發展與輔導",
+  "qno": "11",
+  "chapter": [
+   2
+  ],
+  "stem": "六年級的小娟這次段考成績不佳，於是努力練習跑步，希望在即將到來的運動會中有優異的成績表現。小娟的這種行為最符合下列何種防衛機轉？",
+  "group_text": "",
+  "options": [
+   "投射(projection)",
+   "壓抑(suppression)",
+   "替代(displacement)",
+   "合理化(rationalization)"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "佛洛伊德防衛機轉：替代",
+  "ref_file": "第二章理論與研究 (1).pptx p.12-14",
+  "verified": true,
+  "note": "此題屬考古題中較有爭議的防衛機轉題，請以公告答案(C)為準。",
+  "src_label": "109 兒童發展與輔導 第11題",
+  "id": "Q023",
+  "explanation": {
+   "right": "段考不佳（學業受挫），把動力轉到運動會表現上，是以另一個可達成的目標取代原本無法滿足的目標，公告答案為替代。",
+   "wrong": {
+    "A": "投射是把自己的不良念頭推給別人。",
+    "B": "壓抑是把痛苦經驗壓入潛意識。",
+    "D": "合理化是為失敗找藉口，題目中小娟並未找理由。"
+   },
+   "tip": "換跑道求表現＝替代（以另一對象/目標取代）。"
+  },
+  "sources": [
+   {
+    "label": "109 兒童發展與輔導 第11題",
+    "subject": "兒童發展與輔導",
+    "year": "109",
+    "qno": "11"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "兒童發展與輔導",
+  "qno": "13",
+  "chapter": [
+   5
+  ],
+  "stem": "依據兒童語言發展的理論，下列何者不正確？",
+  "group_text": "",
+  "options": [
+   "行為主義學派主張語言發展是後天學習，以模仿及增強來說明語言發展的過程",
+   "杭士基(A. Chomsky)先天論認為兒童有能力將語詞組合，形成一套有系統的語法規則",
+   "互動論結合先天論與學習論的觀點，主張語言發展由成熟、認知發展與社會互動的環境相互影響",
+   "認知建構學者認同語言發展與兒童的思考、創造力、問題解決能力相關，強調人類具有「語言習得機制」"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "語言發展理論",
+  "ref_file": "第五章三歲前的認知發展.pptx p.12-18",
+  "verified": true,
+  "note": "",
+  "src_label": "109 兒童發展與輔導 第13題",
+  "id": "Q024",
+  "explanation": {
+   "right": "「語言習得機制（LAD）」是杭士基先天論的主張；認知建構學者（皮亞傑）強調語言依賴認知發展，故(D)錯誤。",
+   "wrong": {
+    "A": "行為主義：模仿與增強，正確。",
+    "B": "杭士基先天論：兒童天生能掌握語法規則，正確。",
+    "C": "互動論：成熟、認知與社會互動共同作用，正確。"
+   },
+   "tip": "LAD＝杭士基；建構＝皮亞傑。"
+  },
+  "sources": [
+   {
+    "label": "109 兒童發展與輔導 第13題",
+    "subject": "兒童發展與輔導",
+    "year": "109",
+    "qno": "13"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "兒童發展與輔導",
+  "qno": "15",
+  "chapter": [
+   2
+  ],
+  "stem": "如果研究者想短時間進行 6 歲到 10 歲兒童道德發展的比較，最常使用下列哪一種研究設計？",
+  "group_text": "",
+  "options": [
+   "橫斷研究設計",
+   "縱貫研究設計",
+   "個案研究設計",
+   "序列研究設計"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "研究設計：橫斷研究",
+  "ref_file": "頁48基本研究設計.pdf；頁57序列研究設計.pdf",
+  "verified": true,
+  "note": "",
+  "src_label": "109 兒童發展與輔導 第15題",
+  "id": "Q025",
+  "explanation": {
+   "right": "短時間內比較6歲到10歲不同年齡的兒童，使用橫斷研究（同一時間點、比較不同年齡組）。",
+   "wrong": {
+    "B": "縱貫研究需長期追蹤同一批兒童，耗時長。",
+    "C": "個案研究針對單一個案深入探討。",
+    "D": "序列研究結合橫斷與縱貫，耗時更長。"
+   },
+   "tip": "橫斷＝快、比不同人；縱貫＝慢、追同一人。"
+  },
+  "sources": [
+   {
+    "label": "109 兒童發展與輔導 第15題",
+    "subject": "兒童發展與輔導",
+    "year": "109",
+    "qno": "15"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "兒童發展與輔導",
+  "qno": "23",
+  "chapter": [
+   2
+  ],
+  "stem": "有關皮亞傑(J. Piaget)對認知改變的想法，下列敘述何者錯誤？",
+  "group_text": "",
+  "options": [
+   "基模是指可以被重複及類化的行為模式",
+   "認知平衡是透過同化與調適達成一種穩定狀態",
+   "兒童是主動建構形成一套有組織的心智運思結構",
+   "調適是指利用原有的基模去詮釋外在世界新的經驗"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：基模、同化與調適",
+  "ref_file": "第二章理論與研究 (1).pptx p.43-46",
+  "verified": true,
+  "note": "",
+  "src_label": "109 兒童發展與輔導 第23題",
+  "id": "Q026",
+  "explanation": {
+   "right": "(D)錯誤：利用原有基模去詮釋新經驗是同化；調適是修改或創造基模以容納新經驗。",
+   "wrong": {
+    "A": "基模是可重複、類化的行為與思考模式，正確。",
+    "B": "平衡來自同化與調適達成穩定，正確。",
+    "C": "兒童主動建構心智運思結構，正確。"
+   },
+   "tip": "同化＝舊瓶裝新酒；調適＝換瓶。"
+  },
+  "sources": [
+   {
+    "label": "109 兒童發展與輔導 第23題",
+    "subject": "兒童發展與輔導",
+    "year": "109",
+    "qno": "23"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "兒童發展與輔導",
+  "qno": "24",
+  "chapter": [
+   2,
+   5,
+   7
+  ],
+  "stem": "根據維高思基(L. S. Vygotsky)的社會文化論，下列敘述何者錯誤？",
+  "group_text": "",
+  "options": [
+   "以鷹架搭建協助兒童學習新的知能",
+   "語言發展有助於兒童的思考心智活動及行為",
+   "兒童面臨較困難任務時，其私我語言便會減少",
+   "兒童的學習發生於近側發展區(Zone of Proximal Development, ZPD)"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "維高斯基：社會文化論與私我語言",
+  "ref_file": "第二章理論與研究 (1).pptx p.49；第五章三歲前的認知發展.pptx p.19-21；第七章 p.30-31",
+  "verified": true,
+  "note": "",
+  "src_label": "109 兒童發展與輔導 第24題",
+  "id": "Q027",
+  "explanation": {
+   "right": "(C)錯誤：維高斯基認為任務變困難時，兒童的私我語言反而會增加，用來自我引導解決問題。",
+   "wrong": {
+    "A": "鷹架協助學習新知，正確。",
+    "B": "語言發展有助思考與行為調節，正確。",
+    "D": "學習發生於近側發展區，正確。"
+   },
+   "tip": "越難越碎念——私語是思考的工具。"
+  },
+  "sources": [
+   {
+    "label": "109 兒童發展與輔導 第24題",
+    "subject": "兒童發展與輔導",
+    "year": "109",
+    "qno": "24"
+   }
+  ]
+ },
+ {
+  "year": "110",
+  "subject": "學習者發展與適性輔導",
+  "qno": "9",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "小新的大腦海馬迴受損，他最可能出現下列哪一種問題？",
+  "group_text": "",
+  "options": [
+   "無法控制情緒常發脾氣",
+   "身體動作不協調時常跌倒",
+   "無法判斷對話中的弦外之音",
+   "記不住老師課堂的教學內容"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "海馬迴與記憶",
+  "ref_file": "海馬迴.pptx；邊緣系統.pptx；兒童發展_腦部考古題(無解答版).pptx 第6題",
+  "verified": true,
+  "note": "",
+  "src_label": "110 學習者發展與適性輔導 第9題",
+  "id": "Q028",
+  "explanation": {
+   "right": "海馬迴負責把新經驗轉成長期記憶，受損後會難以記住新訊息，例如老師課堂上教的內容。",
+   "wrong": {
+    "A": "無法控制情緒常發脾氣，較與杏仁核、前額葉的情緒調節有關。",
+    "B": "動作不協調跌倒，較與小腦、基底核有關。",
+    "C": "難以理解弦外之音，較與顳葉、前額葉的社會認知有關。"
+   },
+   "tip": "海馬迴＝記憶的入口（像海馬一樣彎彎的記事本）。"
+  },
+  "sources": [
+   {
+    "label": "110 學習者發展與適性輔導 第9題",
+    "subject": "學習者發展與適性輔導",
+    "year": "110",
+    "qno": "9"
+   }
+  ]
+ },
+ {
+  "year": "110",
+  "subject": "學習者發展與適性輔導",
+  "qno": "13",
+  "chapter": [
+   2
+  ],
+  "stem": "下列哪一種情況最能說明羅吉斯(C. Rogers)「無條件的正向關懷和接納」？",
+  "group_text": "",
+  "options": [
+   "只要小萱表現良好，父母都會特別讚賞，並立即給予肯定的話語或獎品",
+   "小萱把咖哩倒在客廳的新地毯上，父母不但沒有表現出生氣，還說她做得很好",
+   "小萱和妹妹打架，弄傷了妹妹。爸媽告訴小萱雖然她做錯事，但仍然是他們的寶貝孩子",
+   "小萱在學校不小心弄壞同學的貴重樂器。媽媽告訴小萱，只要以後不要再發生這種事，就還是媽媽的好孩子"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "羅吉斯：無條件積極關注（個人中心）",
+  "ref_file": "第二章理論與研究 (1).pptx p.57",
+  "verified": true,
+  "note": "",
+  "src_label": "110 學習者發展與適性輔導 第13題",
+  "id": "Q029",
+  "explanation": {
+   "right": "父母指出行為不對，但仍表明她是他們的寶貝孩子：接納「人」的價值，不接納「行為」，才是無條件的正向關懷。",
+   "wrong": {
+    "A": "表現良好才讚賞，是有條件的關懷。",
+    "B": "對破壞行為說「做得很好」是不當的稱讚，不是接納而是失真。",
+    "D": "「只要以後不再發生才是好孩子」仍附帶條件。"
+   },
+   "tip": "無條件＝人被接納，行為仍可討論。"
+  },
+  "sources": [
+   {
+    "label": "110 學習者發展與適性輔導 第13題",
+    "subject": "學習者發展與適性輔導",
+    "year": "110",
+    "qno": "13"
+   }
+  ]
+ },
+ {
+  "year": "110",
+  "subject": "學習者發展與適性輔導",
+  "qno": "15",
+  "chapter": [
+   2
+  ],
+  "stem": "張老師發現用連續正增強的方式鼓勵曉方準時繳交家庭作業很有效，為了讓她轉化為自發性按時交作業，張老師應該採用下列何種方式？",
+  "group_text": "",
+  "options": [
+   "改用負增強",
+   "立即停止增強",
+   "增加正增強頻率",
+   "改用間歇式增強"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "操作制約：間歇式增強",
+  "ref_file": "第二章理論與研究 (1).pptx p.37-38",
+  "verified": true,
+  "note": "",
+  "src_label": "110 學習者發展與適性輔導 第15題",
+  "id": "Q030",
+  "explanation": {
+   "right": "想讓行為從外控轉成自發並維持，連續增強之後應改用間歇式（部分）增強，因為間歇增強維持行為的力量強、較不易消弱。",
+   "wrong": {
+    "A": "負增強是移除厭惡刺激，與增強時制無關。",
+    "B": "立即停止增強會使行為消弱。",
+    "C": "增加頻率仍然是外在連續依賴，不利於自發。"
+   },
+   "tip": "連續增強學得快、消得快；間歇增強學得慢、維持久。"
+  },
+  "sources": [
+   {
+    "label": "110 學習者發展與適性輔導 第15題",
+    "subject": "學習者發展與適性輔導",
+    "year": "110",
+    "qno": "15"
+   }
+  ]
+ },
+ {
+  "year": "111",
+  "subject": "學習者發展與適性輔導",
+  "qno": "1",
+  "chapter": [
+   2
+  ],
+  "stem": "依據艾瑞克森(E. Erikson)的心理社會發展理論，下列何者是學齡期兒童發展的核心議題？",
+  "group_text": "",
+  "options": [
+   "勤奮對自卑(industry vs. inferiority)",
+   "自動自發對內疚(initiative vs. guilt)",
+   "自主對羞愧懷疑(autonomy vs. shame and doubt)",
+   "自我認同對角色混淆(identity vs. role confusion)"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "艾瑞克森：勤奮進取 vs. 自卑",
+  "ref_file": "第二章理論與研究 (1).pptx p.17-18；第二章/教檢素養導向範例試題分析.pptx",
+  "verified": true,
+  "note": "",
+  "src_label": "111 學習者發展與適性輔導 第1題",
+  "id": "Q031",
+  "explanation": {
+   "right": "學齡期（約6歲~青春期）的核心議題是勤奮進取 vs. 自貶自卑，重點是掌握學業與技能、獲得成就感。",
+   "wrong": {
+    "B": "自動自發 vs. 內疚屬3~6歲。",
+    "C": "自主 vs. 羞愧懷疑屬1~3歲。",
+    "D": "自我認同 vs. 角色混淆屬青春期。"
+   },
+   "tip": "國小＝勤奮 vs. 自卑（Industry vs. Inferiority）。"
+  },
+  "sources": [
+   {
+    "label": "111 學習者發展與適性輔導 第1題",
+    "subject": "學習者發展與適性輔導",
+    "year": "111",
+    "qno": "1"
+   }
+  ]
+ },
+ {
+  "year": "111",
+  "subject": "學習者發展與適性輔導",
+  "qno": "2",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "小光常有上課不專心、容易衝動發言、做事缺乏計畫性等行為表現。他最有可能是哪一腦區的功能有所缺損？",
+  "group_text": "",
+  "options": [
+   "胼胝體",
+   "邊緣系統",
+   "顳葉皮質區",
+   "前額葉皮質區"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "前額葉皮質：執行功能",
+  "ref_file": "第四章三歲前的生理發展.pptx p.12-13；兒童發展_腦部考古題(無解答版).pptx",
+  "verified": true,
+  "note": "",
+  "src_label": "111 學習者發展與適性輔導 第2題",
+  "id": "Q032",
+  "explanation": {
+   "right": "不專心、衝動發言、缺乏計畫是前額葉皮質（執行功能：注意、抑制、計畫）功能不足的表現。",
+   "wrong": {
+    "A": "胼胝體連結左右腦半球，傳遞訊息。",
+    "B": "邊緣系統與情緒、記憶有關。",
+    "C": "顳葉皮質主管聽覺、語言理解與記憶。"
+   },
+   "tip": "衝動＋沒計畫＋分心→前額葉。"
+  },
+  "sources": [
+   {
+    "label": "111 學習者發展與適性輔導 第2題",
+    "subject": "學習者發展與適性輔導",
+    "year": "111",
+    "qno": "2"
+   }
+  ]
+ },
+ {
+  "year": "111",
+  "subject": "學習者發展與適性輔導",
+  "qno": "8",
+  "chapter": [
+   2
+  ],
+  "stem": "育之把自己的座位弄得髒亂不堪，老師除了請他把座位清理乾淨，還要求他把教室打掃一遍。這是下列何種機制的應用？",
+  "group_text": "",
+  "options": [
+   "負增強",
+   "饜足法",
+   "反應代價",
+   "過度矯正"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "操作制約：過度矯正（懲罰技術）",
+  "ref_file": "增強方式與處罰例子說明1121004.docx；第二章理論與研究 (1).pptx p.32-35",
+  "verified": true,
+  "note": "講義未明列此技術，但屬第2章操作制約的處罰與行為改變範圍。",
+  "src_label": "111 學習者發展與適性輔導 第8題",
+  "id": "Q033",
+  "explanation": {
+   "right": "弄髒座位後，除了清理乾淨，還要多打掃整間教室，就是過度矯正：恢復原狀並額外多做補償。",
+   "wrong": {
+    "A": "負增強是移除厭惡刺激以增加行為。",
+    "B": "饜足法是讓個體過量接觸增強物直到厭膩（如不斷要求做想做的出軌行為）。",
+    "C": "反應代價是犯錯就扣掉已有的增強物（如扣點數）。"
+   },
+   "tip": "過度矯正＝恢復原狀＋多做一點。"
+  },
+  "sources": [
+   {
+    "label": "111 學習者發展與適性輔導 第8題",
+    "subject": "學習者發展與適性輔導",
+    "year": "111",
+    "qno": "8"
+   }
+  ]
+ },
+ {
+  "year": "111",
+  "subject": "學習者發展與適性輔導",
+  "qno": "15",
+  "chapter": [
+   2,
+   5,
+   7
+  ],
+  "stem": "皮亞傑(J. Piaget)與維高思基(L. S. Vygotsky)對於兒童「自言自語」的行為，提出了不同的觀點，下列敘述何者錯誤？",
+  "group_text": "",
+  "options": [
+   "皮亞傑認為這是兒童自我中心的一種表現",
+   "維高思基認為內在對話能力是高層次認知歷程的發展特徵",
+   "皮亞傑認為兒童自言自語的行為反映兒童認知發展尚未成熟",
+   "維高思基認為當工作變得比較難時，兒童自言自語的表現會減少"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑 vs. 維高斯基：自言自語",
+  "ref_file": "第五章三歲前的認知發展.pptx p.19-21；第七章 p.30-31",
+  "verified": true,
+  "note": "",
+  "src_label": "111 學習者發展與適性輔導 第15題",
+  "id": "Q034",
+  "explanation": {
+   "right": "(D)錯誤：維高斯基認為工作變難時，兒童的自言自語（私語）會增加，用來自我調節與解題。",
+   "wrong": {
+    "A": "皮亞傑視自言自語為自我中心，正確。",
+    "B": "維高斯基認為內在對話是高層次認知發展的特徵，正確。",
+    "C": "皮亞傑認為這反映認知尚未成熟，正確。"
+   },
+   "tip": "皮亞傑：不成熟的自我中心；維高斯基：越難越用得上的思考工具。"
+  },
+  "sources": [
+   {
+    "label": "111 學習者發展與適性輔導 第15題",
+    "subject": "學習者發展與適性輔導",
+    "year": "111",
+    "qno": "15"
+   }
+  ]
+ },
+ {
+  "year": "111",
+  "subject": "學習者發展與適性輔導",
+  "qno": "20",
+  "chapter": [
+   2
+  ],
+  "stem": "下列哪位兒童的認知發展最有可能已經進入形式運思期？",
+  "group_text": "",
+  "options": [
+   "小忠能夠控制變因，找出影響鐘擺速度的因素",
+   "小美將鉛筆盒中的筆按照長短排列，並加以分類",
+   "小花能理解毛毛蟲轉變成蛹再轉變成蝴蝶的歷程",
+   "小明知道液體從 A 杯倒入 B 杯，體積仍不會改變"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：形式運思期特徵",
+  "ref_file": "第二章理論與研究 (1).pptx p.47",
+  "verified": true,
+  "note": "",
+  "src_label": "111 學習者發展與適性輔導 第20題",
+  "id": "Q035",
+  "explanation": {
+   "right": "控制變因、找出影響鐘擺速度的因素，需要假設演繹與系統化檢驗，屬形式運思期。",
+   "wrong": {
+    "B": "依長短排列與分類是具體運思期（序列化、分類）。",
+    "C": "理解毛毛蟲變蛹變蝴蝶的歷程屬具體事物的變化理解。",
+    "D": "液體倒入不同容器體積不變是守恆，屬具體運思期。"
+   },
+   "tip": "會「控制變因」＝形式運思期。"
+  },
+  "sources": [
+   {
+    "label": "111 學習者發展與適性輔導 第20題",
+    "subject": "學習者發展與適性輔導",
+    "year": "111",
+    "qno": "20"
+   }
+  ]
+ },
+ {
+  "year": "111",
+  "subject": "學習者發展與適性輔導",
+  "qno": "24",
+  "chapter": [
+   2
+  ],
+  "stem": "全班同學跑完操場十圈之後，體育老師對著又餓又累急於下課的同學說：「你們什麼時候把體育用品整理好，就什麼時候下課。」老師運用的是下列何種機制？",
+  "group_text": "",
+  "options": [
+   "消弱",
+   "負增強",
+   "剝奪式懲罰",
+   "施予式懲罰"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "操作制約：負增強",
+  "ref_file": "增強方式與處罰例子說明1121004.docx p.1-2（本題為講義例題）",
+  "verified": true,
+  "note": "",
+  "src_label": "111 學習者發展與適性輔導 第24題",
+  "id": "Q036",
+  "explanation": {
+   "right": "「什麼時候整理好，什麼時候下課」：整理好用具即移除「不能下課」的規定，是移除厭惡刺激以增加整理行為，即負增強。",
+   "wrong": {
+    "A": "消弱是停止增強使行為減少。",
+    "C": "剝奪式懲罰是拿走喜愛之物以減少行為。",
+    "D": "施予式懲罰是給予厭惡刺激以減少行為。"
+   },
+   "tip": "移走討厭的東西、行為變多＝負增強。"
+  },
+  "sources": [
+   {
+    "label": "111 學習者發展與適性輔導 第24題",
+    "subject": "學習者發展與適性輔導",
+    "year": "111",
+    "qno": "24"
+   }
+  ]
+ },
+ {
+  "year": "112",
+  "subject": "學習者發展與適性輔導",
+  "qno": "1",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "下列大腦區域何者與情緒控制較有關係？",
+  "group_text": "",
+  "options": [
+   "額葉",
+   "頂葉",
+   "枕葉",
+   "顳葉"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "額葉與情緒控制",
+  "ref_file": "第四章三歲前的生理發展.pptx p.12-13",
+  "verified": true,
+  "note": "",
+  "src_label": "112 學習者發展與適性輔導 第1題",
+  "id": "Q037",
+  "explanation": {
+   "right": "額葉（尤其前額葉）負責計畫、抑制衝動與情緒調節，與情緒控制關係最密切。",
+   "wrong": {
+    "B": "頂葉主管體感覺與空間知覺。",
+    "C": "枕葉主管視覺。",
+    "D": "顳葉主管聽覺與語言理解。"
+   },
+   "tip": "額葉＝總裁：計畫、抑制、控情緒。"
+  },
+  "sources": [
+   {
+    "label": "112 學習者發展與適性輔導 第1題",
+    "subject": "學習者發展與適性輔導",
+    "year": "112",
+    "qno": "1"
+   }
+  ]
+ },
+ {
+  "year": "112",
+  "subject": "學習者發展與適性輔導",
+  "qno": "6",
+  "chapter": [
+   2
+  ],
+  "stem": "下列哪些是個人中心學派治療關係的要件？甲、同情心乙、真誠一致丙、積極鼓勵丁、無條件積極關注",
+  "group_text": "",
+  "options": [
+   "甲乙",
+   "甲丁",
+   "乙丙",
+   "乙丁"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "羅吉斯：個人中心的核心條件",
+  "ref_file": "第二章理論與研究 (1).pptx p.57",
+  "verified": true,
+  "note": "",
+  "src_label": "112 學習者發展與適性輔導 第6題",
+  "id": "Q038",
+  "explanation": {
+   "right": "個人中心治療關係的要件是真誠一致（乙）與無條件積極關注（丁），再加上同理心。",
+   "wrong": {
+    "A": "同情心（sympathy）不是同理心（empathy），且甲不屬於核心條件。",
+    "B": "甲、丙都不屬於核心條件。",
+    "C": "積極鼓勵屬指導性做法，不是核心條件。"
+   },
+   "tip": "個人中心三要件：同理、真誠、無條件積極關注。"
+  },
+  "sources": [
+   {
+    "label": "112 學習者發展與適性輔導 第6題",
+    "subject": "學習者發展與適性輔導",
+    "year": "112",
+    "qno": "6"
+   }
+  ]
+ },
+ {
+  "year": "112",
+  "subject": "學習者發展與適性輔導",
+  "qno": "10",
+  "chapter": [
+   2,
+   5
+  ],
+  "stem": "小英這次閱讀測驗考了 65 分，遠低於全班的平均成績，所以林老師讓他放學後留下接受課後輔導。老師使用交互教學法 (reciprocal teaching) 教小英摘要與提問等閱讀策略，並逐漸將責任轉移給小英。小英在一週後重寫相同測驗的複本，得到了 85 分。根據以上的情境，下列敘述何者錯誤？",
+  "group_text": "",
+  "options": [
+   "老師的作法符合維高思基 (L. Vygotsky) 的社會文化論",
+   "老師提供的鷹架 (scaffolding) 有助於提升小英的閱讀表現",
+   "85 分代表小英的近側發展區 (zone of proximal development, ZPD)",
+   "65 分可視為小英近側發展區 (zone of proximal development, ZPD) 的下限"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "維高斯基：ZPD 與鷹架",
+  "ref_file": "第二章理論與研究 (1).pptx p.49",
+  "verified": true,
+  "note": "",
+  "src_label": "112 學習者發展與適性輔導 第10題",
+  "id": "Q039",
+  "explanation": {
+   "right": "(C)錯誤：ZPD是「獨立表現」與「有協助下表現」之間的範圍，85分只是有鷹架後的表現（上限），不是ZPD本身。",
+   "wrong": {
+    "A": "交互教學與鷹架逐步轉移責任符合社會文化論。",
+    "B": "提供鷹架有助提升表現，正確。",
+    "D": "獨立表現(65分)可視為ZPD的下限，正確。"
+   },
+   "tip": "ZPD＝獨立表現 到 協助下表現 之間的區間。"
+  },
+  "sources": [
+   {
+    "label": "112 學習者發展與適性輔導 第10題",
+    "subject": "學習者發展與適性輔導",
+    "year": "112",
+    "qno": "10"
+   }
+  ]
+ },
+ {
+  "year": "112",
+  "subject": "學習者發展與適性輔導",
+  "qno": "11",
+  "chapter": [
+   7
+  ],
+  "stem": "老師給小元看兩個盒子，一個盒子有泡芙圖案，另一個則有糖果圖案。老師在小元面前把泡芙放入糖果圖案的盒子。這時，老師問小元：「等一下小華進來後，會到哪個盒子找泡芙吃？」老師主要想測試小元的哪一種能力？",
+  "group_text": "",
+  "options": [
+   "自我調節 (self-regulating)",
+   "道德推理 (moral reasoning)",
+   "語言組成 (language making)",
+   "觀點取替 (perspective taking)"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "心智理論／觀點取替：錯誤信念作業",
+  "ref_file": "第七章兒童期早期的生理與認知發展.pptx p.10、23-24",
+  "verified": true,
+  "note": "",
+  "src_label": "112 學習者發展與適性輔導 第11題",
+  "id": "Q040",
+  "explanation": {
+   "right": "小元在泡芙被換到糖果盒時不在場；測試他能否理解「小華不知道，會去原本的盒子找」，是觀點取替（心智理論的錯誤信念作業）。",
+   "wrong": {
+    "A": "自我調節是調整情緒與行為。",
+    "B": "道德推理是對對錯的判斷。",
+    "C": "語言組成指語音、語意、語法等語言要素。"
+   },
+   "tip": "知道別人「知道的和我不一樣」＝觀點取替／錯誤信念。"
+  },
+  "sources": [
+   {
+    "label": "112 學習者發展與適性輔導 第11題",
+    "subject": "學習者發展與適性輔導",
+    "year": "112",
+    "qno": "11"
+   }
+  ]
+ },
+ {
+  "year": "112",
+  "subject": "學習者發展與適性輔導",
+  "qno": "14",
+  "chapter": [
+   2
+  ],
+  "stem": "根據行為學派的理論，老師輔導學生從事學習時，運用哪種增強方式較有效？",
+  "group_text": "",
+  "options": [
+   "當學生進步時，提高增強的頻率",
+   "整個過程皆應使用立即與持續的增強",
+   "一開始先持續性增強，之後再間歇性增強",
+   "一開始先間歇性增強，之後再持續性增強"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "操作制約：增強時制",
+  "ref_file": "第二章理論與研究 (1).pptx p.37",
+  "verified": true,
+  "note": "",
+  "src_label": "112 學習者發展與適性輔導 第14題",
+  "id": "Q041",
+  "explanation": {
+   "right": "學習新行為初期先用連續增強使行為建立，之後改間歇增強使行為持久。",
+   "wrong": {
+    "A": "只提高頻率沒有區分階段。",
+    "B": "全程連續增強，一旦停止易消弱。",
+    "D": "一開始就間歇增強，行為不易建立。"
+   },
+   "tip": "先連續建立，後間歇維持。"
+  },
+  "sources": [
+   {
+    "label": "112 學習者發展與適性輔導 第14題",
+    "subject": "學習者發展與適性輔導",
+    "year": "112",
+    "qno": "14"
+   }
+  ]
+ },
+ {
+  "year": "112",
+  "subject": "學習者發展與適性輔導",
+  "qno": "22",
+  "chapter": [
+   2
+  ],
+  "stem": "小家有高度的數學考試焦慮。李老師試著讓他想像會激起焦慮的考試情境，從引發輕微焦慮的情境直到引發劇烈焦慮的情境。同時引導他面對每一個情境學習放鬆、舒緩壓力，至終解除焦慮。李老師採用的是哪一種治療方法？",
+  "group_text": "",
+  "options": [
+   "現場暴露法",
+   "系統減敏感法",
+   "社會技巧訓練",
+   "自我肯定訓練"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "反制約：系統減敏感法",
+  "ref_file": "反制約及系統減敏法.pptx；第二章理論與研究 (1).pptx p.27-28",
+  "verified": true,
+  "note": "",
+  "src_label": "112 學習者發展與適性輔導 第22題",
+  "id": "Q042",
+  "explanation": {
+   "right": "建立焦慮階層（輕微到劇烈），逐步想像並搭配放鬆，直到焦慮解除，是系統減敏感法。",
+   "wrong": {
+    "A": "現場暴露法是直接面對真實情境。",
+    "C": "社會技巧訓練是教導人際行為。",
+    "D": "自我肯定訓練是教導適當表達想法與權利。"
+   },
+   "tip": "階層＋放鬆＝系統減敏感。"
+  },
+  "sources": [
+   {
+    "label": "112 學習者發展與適性輔導 第22題",
+    "subject": "學習者發展與適性輔導",
+    "year": "112",
+    "qno": "22"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "學習者發展與適性輔導",
+  "qno": "2",
+  "chapter": [
+   2,
+   7
+  ],
+  "stem": "兒童若能瞭解「8 + 6 = 14」，以及「14 − 6 = 8」，需要具備下列何種運思能力？",
+  "group_text": "",
+  "options": [
+   "集中性",
+   "遞移性",
+   "可逆性",
+   "恆存性"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：可逆性（保留概念）",
+  "ref_file": "第七章兒童期早期的生理與認知發展.pptx p.14-16",
+  "verified": true,
+  "note": "",
+  "src_label": "113 學習者發展與適性輔導 第2題",
+  "id": "Q043",
+  "explanation": {
+   "right": "知道8+6=14也知道14−6=8，代表能在心理上把運算倒轉，是可逆性，屬具體運思期。",
+   "wrong": {
+    "A": "集中性是只注意單一面向，是前運思期的限制。",
+    "B": "遞移性（遞移推論）是由A>B、B>C推出A>C。",
+    "D": "恆存性指物體不在眼前仍然存在（物體恆存），屬感覺動作期。"
+   },
+   "tip": "加減互為反運算＝可逆性。"
+  },
+  "sources": [
+   {
+    "label": "113 學習者發展與適性輔導 第2題",
+    "subject": "學習者發展與適性輔導",
+    "year": "113",
+    "qno": "2"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "學習者發展與適性輔導",
+  "qno": "4",
+  "chapter": [
+   2
+  ],
+  "stem": "小勻經常使用社交平台分享自己的生活，觀看別人的日常動態，建立更多社交連結。小勻也熱愛蝴蝶，常利用平台觀看不同種類蝴蝶幼蟲成長與蛻變過程的紀錄片。根據馬斯洛(A. Maslow)的需求理論，小勻是為了滿足下列哪些層次的需求？",
+  "group_text": "",
+  "options": [
+   "自尊、安全",
+   "自尊、認知",
+   "愛與隸屬、認知",
+   "愛與隸屬、自我實現"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "馬斯洛：需求層次論",
+  "ref_file": "第二章理論與研究 (1).pptx p.54",
+  "verified": true,
+  "note": "",
+  "src_label": "113 學習者發展與適性輔導 第4題",
+  "id": "Q044",
+  "explanation": {
+   "right": "分享生活、建立社交連結是愛與隸屬需求；觀看蝴蝶蛻變的紀錄片是求知（認知）需求。",
+   "wrong": {
+    "A": "自尊與安全需求不是題幹所述的行為。",
+    "B": "題幹沒有尋求他人尊重與肯定的表現。",
+    "D": "自我實現是最高層次，題幹沒有顯示。"
+   },
+   "tip": "生理→安全→愛與歸屬→尊重→求知/審美→自我實現。"
+  },
+  "sources": [
+   {
+    "label": "113 學習者發展與適性輔導 第4題",
+    "subject": "學習者發展與適性輔導",
+    "year": "113",
+    "qno": "4"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "學習者發展與適性輔導",
+  "qno": "6",
+  "chapter": [
+   2,
+   7
+  ],
+  "stem": "皮亞傑(J. Piaget)的認知理論中，兒童對保留概念的發展順序，下列何者正確？",
+  "group_text": "",
+  "options": [
+   "重量保留→數量保留→長度保留→質量保留",
+   "長度保留→數量保留→體積保留→重量保留",
+   "質量保留→重量保留→數量保留→體積保留",
+   "數量保留→長度保留→重量保留→體積保留"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：保留概念的發展順序",
+  "ref_file": "第七章兒童期早期的生理與認知發展.pptx p.20、22（講義例題：113教檢）",
+  "verified": true,
+  "note": "",
+  "src_label": "113 學習者發展與適性輔導 第6題",
+  "id": "Q045",
+  "explanation": {
+   "right": "保留概念的出現順序是：數量、長度（約6~7歲）→質量→重量（約8~10歲）→體積（約11歲以後），故(D)正確。",
+   "wrong": {
+    "A": "順序顛倒了，重量保留較晚才出現。",
+    "B": "長度、數量順序錯置，體積也不是在重量之前。",
+    "C": "質量不是最早，數量與長度較早。"
+   },
+   "tip": "數、長、質、重、體——越抽象越晚。"
+  },
+  "sources": [
+   {
+    "label": "113 學習者發展與適性輔導 第6題",
+    "subject": "學習者發展與適性輔導",
+    "year": "113",
+    "qno": "6"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "學習者發展與適性輔導",
+  "qno": "8",
+  "chapter": [
+   1,
+   3
+  ],
+  "stem": "研究發現同一家庭長大的同卵雙胞胎，其智商的相關係數高於在不同家庭長大的同卵雙胞胎。根據以上結果推論智商跟遺傳或環境的關聯性，下列何者正確？",
+  "group_text": "",
+  "options": [
+   "智商與環境有關",
+   "智商與遺傳有關",
+   "智商與遺傳無關，與環境也無關",
+   "智商與遺傳有關，與環境也有關"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "遺傳與環境：雙胞胎研究",
+  "ref_file": "第一章及教師檢定考試.pptx p.9",
+  "verified": true,
+  "note": "公告答案為(A)；其他選項說法在研究上也有道理，作答時請抓題幹的比較對象。",
+  "src_label": "113 學習者發展與適性輔導 第8題",
+  "id": "Q046",
+  "explanation": {
+   "right": "同卵雙生基因相同，但在同一家庭長大者智商相關高於在不同家庭長大者，表示環境確實影響智商（公告答案為(A)）。",
+   "wrong": {
+    "B": "兩組都是同卵雙生，遺傳條件相同，比較的變項是成長環境，所以這份資料推不出遺傳的作用。",
+    "C": "環境不同時相關降低，不能說與環境無關。",
+    "D": "題目的比較只改變環境，無法由此推論遺傳的貢獻，只能肯定環境有影響。"
+   },
+   "tip": "同基因、不同環境，相關降低→環境有影響。"
+  },
+  "sources": [
+   {
+    "label": "113 學習者發展與適性輔導 第8題",
+    "subject": "學習者發展與適性輔導",
+    "year": "113",
+    "qno": "8"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "學習者發展與適性輔導",
+  "qno": "10",
+  "chapter": [
+   2
+  ],
+  "stem": "根據阿德勒學派的觀點，下列何者是德萊克斯(R. Dreikurs)認為兒童不當行為的可能原因？",
+  "group_text": "",
+  "options": [
+   "低自我控制",
+   "偏差同儕影響",
+   "錯誤的行為目標",
+   "社會連結不完整"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "阿德勒學派：德瑞克斯的不當行為目標",
+  "ref_file": "阿德勒 (1) (1).pdf；第二章理論與研究 (1).pptx p.56",
+  "verified": true,
+  "note": "阿德勒講義(掃描檔)未能完整OCR，概念依講義第2章簡報p.56及一般教材。",
+  "src_label": "113 學習者發展與適性輔導 第10題",
+  "id": "Q047",
+  "explanation": {
+   "right": "德瑞克斯認為兒童不當行為源於「錯誤的行為目標」（爭取注意、爭取權力、報復、顯示無能）。",
+   "wrong": {
+    "A": "低自我控制是犯罪學的觀點。",
+    "B": "偏差同儕影響是社會學習/差別接觸觀點。",
+    "D": "社會連結不完整是赫胥（Hirschi）的社會控制觀點。"
+   },
+   "tip": "阿德勒：行為都有目標，不當行為＝錯誤目標。"
+  },
+  "sources": [
+   {
+    "label": "113 學習者發展與適性輔導 第10題",
+    "subject": "學習者發展與適性輔導",
+    "year": "113",
+    "qno": "10"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "學習者發展與適性輔導",
+  "qno": "12",
+  "chapter": [
+   2
+  ],
+  "stem": "李老師在學生出現作業缺交、干擾上課秩序等行為問題時，會登記缺點，一週累積達五次以上就需接受懲罰，若當週未被記缺點可累積加分，期末可換嘉獎或小禮物。李老師運用下列哪些原理？甲、古典制約乙、操作制約丙、生理回饋丁、代幣制度",
+  "group_text": "",
+  "options": [
+   "甲乙",
+   "丙丁",
+   "甲丙",
+   "乙丁"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "操作制約：代幣制度",
+  "ref_file": "第二章理論與研究 (1).pptx p.38",
+  "verified": true,
+  "note": "",
+  "src_label": "113 學習者發展與適性輔導 第12題",
+  "id": "Q048",
+  "explanation": {
+   "right": "缺點／加分累積換獎品屬於操作制約（後果影響行為），兌換物品的設計為代幣制度。",
+   "wrong": {
+    "A": "甲古典制約是刺激與刺激配對，題幹沒有，故甲乙不對。",
+    "B": "丙生理回饋是用儀器回饋生理指標，題幹沒有，故丙丁不對。",
+    "C": "甲、丙都不符合題幹。"
+   },
+   "tip": "集點換獎品＝代幣制度（操作制約）。"
+  },
+  "sources": [
+   {
+    "label": "113 學習者發展與適性輔導 第12題",
+    "subject": "學習者發展與適性輔導",
+    "year": "113",
+    "qno": "12"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "學習者發展與適性輔導",
+  "qno": "13",
+  "chapter": [
+   2,
+   5,
+   7
+  ],
+  "stem": "張老師發現一年級的小恩在數學考試時會喃喃自語。根據維高斯基(L. Vygotsky)對認知發展的看法，下列關於小恩行為的解釋何者較適切？",
+  "group_text": "",
+  "options": [
+   "兒童自我中心的表現",
+   "在運用語言幫助思考",
+   "在透過複誦提取記憶",
+   "因為無法集中注意力"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "維高斯基：私我語言",
+  "ref_file": "第五章三歲前的認知發展.pptx p.19-21；第七章 p.30-31",
+  "verified": true,
+  "note": "",
+  "src_label": "113 學習者發展與適性輔導 第13題",
+  "id": "Q049",
+  "explanation": {
+   "right": "一年級學生考試時喃喃自語，維高斯基視為在用語言幫助思考與自我調節。",
+   "wrong": {
+    "A": "自我中心的解釋是皮亞傑的觀點。",
+    "C": "複誦提取記憶不是私語的主要功能。",
+    "D": "私語並不表示注意力不集中。"
+   },
+   "tip": "皮亞傑看到不成熟，維高斯基看到思考工具。"
+  },
+  "sources": [
+   {
+    "label": "113 學習者發展與適性輔導 第13題",
+    "subject": "學習者發展與適性輔導",
+    "year": "113",
+    "qno": "13"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "學習者發展與適性輔導",
+  "qno": "16",
+  "chapter": [
+   2
+  ],
+  "stem": "小進能理解別人的想法可能和自己不一樣；思考問題時有組織；對於重量已經有保留概念，但尚無法進行假設檢定。根據艾瑞克森(E. Erikson)的理論，下列何者最可能是小進目前的社會心理發展任務？",
+  "group_text": "",
+  "options": [
+   "信任對不信任",
+   "勤奮進取對自貶自卑",
+   "自動自發對退縮愧疚",
+   "自我統合對角色混亂"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "艾瑞克森＋皮亞傑：具體運思期與勤奮進取",
+  "ref_file": "第二章理論與研究 (1).pptx p.17、47",
+  "verified": true,
+  "note": "",
+  "src_label": "113 學習者發展與適性輔導 第16題",
+  "id": "Q050",
+  "explanation": {
+   "right": "小進能理解他人想法、思考有組織、有重量保留但尚不能假設檢定，屬具體運思期，相當於國小階段，社會心理任務為勤奮進取 vs. 自貶自卑。",
+   "wrong": {
+    "A": "信任 vs. 不信任屬0~1歲。",
+    "C": "自動自發 vs. 退縮愧疚屬3~6歲。",
+    "D": "自我統合 vs. 角色混淆屬青春期。"
+   },
+   "tip": "具體運思期（7~11歲）＝勤奮 vs. 自卑。"
+  },
+  "sources": [
+   {
+    "label": "113 學習者發展與適性輔導 第16題",
+    "subject": "學習者發展與適性輔導",
+    "year": "113",
+    "qno": "16"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "學習者發展與適性輔導",
+  "qno": "21",
+  "chapter": [
+   2
+  ],
+  "stem": "四年級的小布頻繁出現干擾行為影響上課，導師決定使用以下五個步驟對小布的行為進行塑造。請選出正確的順序。甲、行為塑造乙、評估效果丙、選擇適當增強物丁、測定行為的基準線戊、確定目標行為與終點行為",
+  "group_text": "",
+  "options": [
+   "甲乙丙丁戊",
+   "戊丁乙甲丙",
+   "戊丁丙甲乙",
+   "丁甲丙戊乙"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "操作制約：行為塑造的步驟",
+  "ref_file": "第二章理論與研究 (1).pptx p.38",
+  "verified": true,
+  "note": "",
+  "src_label": "113 學習者發展與適性輔導 第21題",
+  "id": "Q051",
+  "explanation": {
+   "right": "行為塑造的順序：確定目標行為與終點行為（戊）→測定基線（丁）→選擇適當增強物（丙）→行為塑造（甲）→評估效果（乙）。",
+   "wrong": {
+    "A": "順序顛倒，先評估效果不合理。",
+    "B": "基線之後應先選增強物才能進行塑造。",
+    "D": "應先確定目標行為，再測基線。"
+   },
+   "tip": "目標→基線→增強物→塑造→評估。"
+  },
+  "sources": [
+   {
+    "label": "113 學習者發展與適性輔導 第21題",
+    "subject": "學習者發展與適性輔導",
+    "year": "113",
+    "qno": "21"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "學習者發展與適性輔導",
+  "qno": "23",
+  "chapter": [
+   4
+  ],
+  "stem": "下列哪一項敘述較能說明青少年「不顧風險在懸崖邊自拍」的行為？",
+  "group_text": "",
+  "options": [
+   "處理高層次認知判斷的前額葉尚未發展成熟",
+   "知覺集中傾向導致青少年容易忽視活動的風險",
+   "後設認知的提升導致青少年認為自己不容易受傷",
+   "掌管情緒經驗與感官刺激的邊緣系統尚未發展成熟"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "前額葉皮質與邊緣系統的成熟（青春期腦）",
+  "ref_file": "第四章三歲前的生理發展.pptx p.12-13、17；邊緣系統.pptx",
+  "verified": true,
+  "note": "情境為青少年，但考點是腦部前額葉成熟順序（第3-4章腦部），列為邊界題。",
+  "src_label": "113 學習者發展與適性輔導 第23題",
+  "id": "Q052",
+  "explanation": {
+   "right": "處理高層次判斷、風險評估的前額葉皮質尚未成熟，導致不顧風險的冒險行為。",
+   "wrong": {
+    "B": "知覺集中屬前運思期，不是青少年的特徵。",
+    "C": "後設認知提升不會導致覺得自己不易受傷（那是想像觀眾與個人神話）。",
+    "D": "邊緣系統成熟較早，主要是情緒與獎賞較強，並非「尚未成熟」。"
+   },
+   "tip": "邊緣系統先熟（衝）、前額葉晚熟（煞車）。"
+  },
+  "sources": [
+   {
+    "label": "113 學習者發展與適性輔導 第23題",
+    "subject": "學習者發展與適性輔導",
+    "year": "113",
+    "qno": "23"
+   }
+  ]
+ },
+ {
+  "year": "114",
+  "subject": "學習者發展與適性輔導",
+  "qno": "1",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "小朱一年級時，只要心情不好就會哭鬧或罵人。升上五年級後，他心情不好時已能用深呼吸讓自己平靜下來。請問，小朱的轉變跟大腦哪一部分的成熟比較有關？",
+  "group_text": "",
+  "options": [
+   "松果體",
+   "胼胝體",
+   "前額葉",
+   "海馬迴"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "前額葉皮質與情緒調節",
+  "ref_file": "第四章三歲前的生理發展.pptx p.12-13；兒童發展_腦部考古題(無解答版).pptx",
+  "verified": true,
+  "note": "",
+  "src_label": "114 學習者發展與適性輔導 第1題",
+  "id": "Q053",
+  "explanation": {
+   "right": "從一年級哭鬧罵人，到五年級能用深呼吸平靜，與前額葉的成熟（抑制與情緒調節）關係最大。",
+   "wrong": {
+    "A": "松果體調節睡眠週期。",
+    "B": "胼胝體連結左右半球。",
+    "D": "海馬迴主管記憶。"
+   },
+   "tip": "情緒煞車＝前額葉。"
+  },
+  "sources": [
+   {
+    "label": "114 學習者發展與適性輔導 第1題",
+    "subject": "學習者發展與適性輔導",
+    "year": "114",
+    "qno": "1"
+   }
+  ]
+ },
+ {
+  "year": "114",
+  "subject": "學習者發展與適性輔導",
+  "qno": "3",
+  "chapter": [
+   2
+  ],
+  "stem": "老師持續傾聽，讓學生表達感受。這樣的輔導方式符合羅吉斯(C. Rogers)人本學派的哪一個概念？",
+  "group_text": "",
+  "options": [
+   "賦能",
+   "普同感",
+   "同理心",
+   "無條件積極關注"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "羅吉斯：個人中心（無條件積極關注）",
+  "ref_file": "第二章理論與研究 (1).pptx p.57",
+  "verified": true,
+  "note": "傾聽與同理心在實務上很接近，本題請以公告答案(D)為準。",
+  "src_label": "114 學習者發展與適性輔導 第3題",
+  "id": "Q054",
+  "explanation": {
+   "right": "持續傾聽、不評價地讓學生表達感受，反映的是無條件積極關注的接納態度（公告答案為(D)）。",
+   "wrong": {
+    "A": "賦能是引導當事人發現自己的力量。",
+    "B": "普同感是團體諮商療效因子，指發現別人也有相同困擾。",
+    "C": "同理心需要有「回應」其感受的語句，題幹強調的是持續傾聽、不帶條件地接納。"
+   },
+   "tip": "傾聽接納不評價＝無條件積極關注。"
+  },
+  "sources": [
+   {
+    "label": "114 學習者發展與適性輔導 第3題",
+    "subject": "學習者發展與適性輔導",
+    "year": "114",
+    "qno": "3"
+   }
+  ]
+ },
+ {
+  "year": "114",
+  "subject": "學習者發展與適性輔導",
+  "qno": "9",
+  "chapter": [
+   2
+  ],
+  "stem": "小傑的座位過於髒亂，經老師指正後便大聲頂嘴：「為什麼每次都要聽你的？」根據阿德勒(A. Adler)學派的理論，小傑的行為目標較屬於下列何者？",
+  "group_text": "",
+  "options": [
+   "爭取權力",
+   "獲得注意",
+   "尋求報復",
+   "顯現無能"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "阿德勒：不當行為的目標（爭取權力）",
+  "ref_file": "阿德勒 (1) (1).pdf；第二章理論與研究 (1).pptx p.56",
+  "verified": true,
+  "note": "阿德勒講義(掃描檔)未能完整OCR，依講義第2章簡報p.56及一般教材。",
+  "src_label": "114 學習者發展與適性輔導 第9題",
+  "id": "Q055",
+  "explanation": {
+   "right": "被指正後大聲頂嘴「為什麼每次都要聽你的？」是不服從、與老師爭奪控制權，屬爭取權力。",
+   "wrong": {
+    "B": "獲得注意是只想被看見，不一定對抗。",
+    "C": "尋求報復是想傷害他人以洩憤。",
+    "D": "顯現無能是放棄、以「我不會」逃避要求。"
+   },
+   "tip": "注意→權力→報復→無能：由輕到重。"
+  },
+  "sources": [
+   {
+    "label": "114 學習者發展與適性輔導 第9題",
+    "subject": "學習者發展與適性輔導",
+    "year": "114",
+    "qno": "9"
+   }
+  ]
+ },
+ {
+  "year": "114",
+  "subject": "學習者發展與適性輔導",
+  "qno": "13",
+  "chapter": [
+   2
+  ],
+  "stem": "小元在班級討論中分享自己的想法，卻遭到部分同學嘲笑，此後其他同學變得不太願意公開表達意見。依據班度拉(A. Bandura)的社會學習理論，下列何者最能解釋此一現象？",
+  "group_text": "",
+  "options": [
+   "模仿學習",
+   "直接增強",
+   "社會性增強",
+   "替代性懲罰"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "班杜拉：替代性懲罰（社會學習論）",
+  "ref_file": "第二章理論與研究 (1).pptx p.40",
+  "verified": true,
+  "note": "",
+  "src_label": "114 學習者發展與適性輔導 第13題",
+  "id": "Q056",
+  "explanation": {
+   "right": "看到別人發言被嘲笑受罰，自己也不敢表達意見，是觀察他人受處罰而減少該行為，即替代性懲罰。",
+   "wrong": {
+    "A": "模仿學習是學習他人的行為。",
+    "B": "直接增強是自己行為直接得到獎賞。",
+    "C": "社會性增強是他人的讚賞、注意等增強物，題幹在說觀察他人受罰。"
+   },
+   "tip": "看別人被罰而不敢做＝替代性懲罰。"
+  },
+  "sources": [
+   {
+    "label": "114 學習者發展與適性輔導 第13題",
+    "subject": "學習者發展與適性輔導",
+    "year": "114",
+    "qno": "13"
+   }
+  ]
+ },
+ {
+  "year": "114",
+  "subject": "學習者發展與適性輔導",
+  "qno": "19",
+  "chapter": [
+   2
+  ],
+  "stem": "小信能理解即使將水倒入形狀不同的容器，總量仍不改變。他也能依長短將吸管排列順序，並逐漸可以同時考慮事物的多個面向。下列何者最符合小信的認知發展？",
+  "group_text": "",
+  "options": [
+   "能對具體事物進行邏輯思考",
+   "能以抽象邏輯進行假設推理",
+   "主要學習方式是模仿教師行為",
+   "傾向單一視角，難理解因果關係"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：具體運思期特徵",
+  "ref_file": "第二章理論與研究 (1).pptx p.47",
+  "verified": true,
+  "note": "",
+  "src_label": "114 學習者發展與適性輔導 第19題",
+  "id": "Q057",
+  "explanation": {
+   "right": "理解水倒入不同容器總量不變（守恆）、能依長短排序、能同時考慮多個面向，屬具體運思期：能對具體事物進行邏輯思考。",
+   "wrong": {
+    "B": "抽象邏輯假設推理屬形式運思期。",
+    "C": "模仿教師行為不是皮亞傑階段的主要學習方式。",
+    "D": "單一視角、難理解因果屬前運思期。"
+   },
+   "tip": "守恆＋序列化＋去集中＝具體運思期。"
+  },
+  "sources": [
+   {
+    "label": "114 學習者發展與適性輔導 第19題",
+    "subject": "學習者發展與適性輔導",
+    "year": "114",
+    "qno": "19"
+   }
+  ]
+ },
+ {
+  "year": "114",
+  "subject": "學習者發展與適性輔導",
+  "qno": "22",
+  "chapter": [
+   2
+  ],
+  "stem": "小平為尋求關注，經常打斷老師並大聲提問或分享與課程無關的議題，老師為了回應他而影響課程進度。老師決定開始嘗試刻意不理會小平的發言，此後老師較可能面臨下列哪些狀況？甲、小平會更頻繁、更大聲插話以獲得注意乙、小平會因為沒有獲得老師關注而立刻停止隨意發言丙、小平的干擾行為雖然暫時停止，但是可能某天又會故態復萌",
+  "group_text": "",
+  "options": [
+   "甲乙",
+   "甲丙",
+   "乙丙",
+   "甲乙丙"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "操作制約：消弱與消弱爆發",
+  "ref_file": "第二章理論與研究 (1).pptx p.26",
+  "verified": true,
+  "note": "",
+  "src_label": "114 學習者發展與適性輔導 第22題",
+  "id": "Q058",
+  "explanation": {
+   "right": "刻意不理會後，行為先短暫增強（更頻繁更大聲，消弱爆發），之後下降，但可能自然恢復（故態復萌）。",
+   "wrong": {
+    "A": "乙錯：消弱過程中行為不會立刻停止，反而先增加。",
+    "C": "乙錯，且漏了甲（消弱爆發）。",
+    "D": "乙錯，甲丙才符合消弱歷程。"
+   },
+   "tip": "忽略後先變本加厲、再慢慢消失、偶爾復發。"
+  },
+  "sources": [
+   {
+    "label": "114 學習者發展與適性輔導 第22題",
+    "subject": "學習者發展與適性輔導",
+    "year": "114",
+    "qno": "22"
+   }
+  ]
+ },
+ {
+  "year": "115",
+  "subject": "學習者發展與適性輔導",
+  "qno": "1",
+  "chapter": [
+   2
+  ],
+  "stem": "黃老師在教五年級分數四則計算時，發現學生無法理解 1/3 和 4/12 為等值分數。依據皮亞傑(J. Piaget)的認知發展理論，下列何種教學策略較合適？",
+  "group_text": "",
+  "options": [
+   "提供數棒條或圓形切片，讓學生實際操作並比較整體大小",
+   "直接示範約分或擴分的規則，並要求學生反覆的練習計算",
+   "先測驗學生等值分數公式的知識，再依結果進行補救教學",
+   "講解等值分數的計算步驟，讓學生模仿解題再練習應用題"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：具體運思期的教學",
+  "ref_file": "第二章理論與研究 (1).pptx p.47",
+  "verified": true,
+  "note": "",
+  "src_label": "115 學習者發展與適性輔導 第1題",
+  "id": "Q059",
+  "explanation": {
+   "right": "五年級學生主要在具體運思期，需要借助具體教具（數棒、圓形切片）操作比較，才能理解等值分數。",
+   "wrong": {
+    "B": "直接示範規則並反覆練習，忽略具體操作階段。",
+    "C": "先測驗公式知識偏離皮亞傑的建構觀點。",
+    "D": "講解步驟、模仿解題屬傳遞式教學。"
+   },
+   "tip": "具體運思期＝要「摸得到」才想得通。"
+  },
+  "sources": [
+   {
+    "label": "115 學習者發展與適性輔導 第1題",
+    "subject": "學習者發展與適性輔導",
+    "year": "115",
+    "qno": "1"
+   }
+  ]
+ },
+ {
+  "year": "115",
+  "subject": "學習者發展與適性輔導",
+  "qno": "4",
+  "chapter": [
+   7
+  ],
+  "stem": "小玲看到好朋友小竹在哭，想到小竹最心愛的娃娃不見了，於是主動過去抱抱和安慰她。關於小玲的行為，下列敘述何者較正確？",
+  "group_text": "",
+  "options": [
+   "具備觀點取替能力",
+   "處於自我中心階段",
+   "展現物體恆存概念",
+   "屬於一種制約反應"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "觀點取替與同理（心智理論）",
+  "ref_file": "第七章兒童期早期的生理與認知發展.pptx p.10、23-24",
+  "verified": true,
+  "note": "",
+  "src_label": "115 學習者發展與適性輔導 第4題",
+  "id": "Q060",
+  "explanation": {
+   "right": "小玲想到小竹心愛的娃娃不見而去安慰，代表能想像他人的感受與想法，具備觀點取替能力。",
+   "wrong": {
+    "B": "自我中心階段無法理解他人立場。",
+    "C": "物體恆存是知道看不見的東西仍存在。",
+    "D": "題幹不是制約反應。"
+   },
+   "tip": "能想像別人的內心＝觀點取替。"
+  },
+  "sources": [
+   {
+    "label": "115 學習者發展與適性輔導 第4題",
+    "subject": "學習者發展與適性輔導",
+    "year": "115",
+    "qno": "4"
+   }
+  ]
+ },
+ {
+  "year": "115",
+  "subject": "學習者發展與適性輔導",
+  "qno": "6",
+  "chapter": [
+   2,
+   5,
+   7
+  ],
+  "stem": "小華在解數學題時總是會喃喃自語 ，讓鄰座同學感到困擾 。根據維高斯基 (L. Vygotsky)的理論，下列敘述何者正確？",
+  "group_text": "",
+  "options": [
+   "小華的自我中心讓他會自言自語",
+   "小華是為了引起注意而故意發出聲音",
+   "小華是在使用語言進行認知自我調整",
+   "小華欠缺自我控制不發出聲音的能力"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "維高斯基：私我語言＝認知自我調整",
+  "ref_file": "第五章三歲前的認知發展.pptx p.19-21；第七章 p.30-31",
+  "verified": true,
+  "note": "",
+  "src_label": "115 學習者發展與適性輔導 第6題",
+  "id": "Q061",
+  "explanation": {
+   "right": "維高斯基認為喃喃自語是兒童用語言進行思考與自我調節，是認知工具。",
+   "wrong": {
+    "A": "自我中心是皮亞傑的解釋。",
+    "B": "題幹並無「為引起注意」的證據。",
+    "D": "兒童並非欠缺自我控制，而是在用私語幫助思考。"
+   },
+   "tip": "私語＝思考的外顯聲音。"
+  },
+  "sources": [
+   {
+    "label": "115 學習者發展與適性輔導 第6題",
+    "subject": "學習者發展與適性輔導",
+    "year": "115",
+    "qno": "6"
+   }
+  ]
+ },
+ {
+  "year": "115",
+  "subject": "學習者發展與適性輔導",
+  "qno": "13",
+  "chapter": [
+   2,
+   5
+  ],
+  "stem": "為了提升學生閱讀的理解層次，老師引導學生先說出故事的人、事、物，再分享角色的動機與情緒，最後討論作者的意圖並評價文章的觀點。此做法較符合下列何者？",
+  "group_text": "",
+  "options": [
+   "社會文化觀點的鷹架支持策略",
+   "社會文化觀點的個別差異教學",
+   "社會認知觀點的自我調整策略",
+   "社會認知觀點的增強學習策略"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "維高斯基：鷹架支持",
+  "ref_file": "第二章理論與研究 (1).pptx p.49",
+  "verified": true,
+  "note": "",
+  "src_label": "115 學習者發展與適性輔導 第13題",
+  "id": "Q062",
+  "explanation": {
+   "right": "由事實（人事物）到動機情緒，再到作者意圖與評價，是由淺入深的層層引導，符合社會文化觀點的鷹架支持。",
+   "wrong": {
+    "B": "個別差異教學並不是題幹重點。",
+    "C": "自我調整策略強調學習者自我監控。",
+    "D": "增強學習策略強調獎懲。"
+   },
+   "tip": "由淺入深、逐步引導＝鷹架。"
+  },
+  "sources": [
+   {
+    "label": "115 學習者發展與適性輔導 第13題",
+    "subject": "學習者發展與適性輔導",
+    "year": "115",
+    "qno": "13"
+   }
+  ]
+ },
+ {
+  "year": "115",
+  "subject": "學習者發展與適性輔導",
+  "qno": "15",
+  "chapter": [
+   2
+  ],
+  "stem": "為鼓勵小平發言，剛開始時只要小平舉手，老師就會點他並給予正向回饋。後來，即使小平舉手，老師也不一定會點他，但平均舉手 3 次，就會點他 1 次。老師的增強時制從連續改為下列何者？",
+  "group_text": "",
+  "options": [
+   "固定時距時制",
+   "變動時距時制",
+   "固定比率時制",
+   "變動比率時制"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "操作制約：增強時制",
+  "ref_file": "第二章理論與研究 (1).pptx p.37",
+  "verified": true,
+  "note": "",
+  "src_label": "115 學習者發展與適性輔導 第15題",
+  "id": "Q063",
+  "explanation": {
+   "right": "平均舉手3次就點他1次，次數有變動不固定，屬變動比率時制（按反應次數，但平均而非固定）。",
+   "wrong": {
+    "A": "固定時距是隔固定時間才增強。",
+    "B": "變動時距是隔不定時間才增強。",
+    "C": "固定比率是每做固定次數就增強。"
+   },
+   "tip": "比率看次數、時距看時間；固定＝定、變動＝不定。"
+  },
+  "sources": [
+   {
+    "label": "115 學習者發展與適性輔導 第15題",
+    "subject": "學習者發展與適性輔導",
+    "year": "115",
+    "qno": "15"
+   }
+  ]
+ },
+ {
+  "year": "115",
+  "subject": "學習者發展與適性輔導",
+  "qno": "21",
+  "chapter": [
+   2
+  ],
+  "stem": "關於認知發展理論的敘述，下列何者正確？甲、皮亞傑(J. Piaget)認為兒童會主動建構認知結構乙、行為學派認為兒童認知結構是靠後天文化與學習歷程而建構丙、布魯納(J. Bruner)認為兒童是主動求知者，教育則可以促進認知發展丁、維高斯基(L. Vygotsky)認為兒童在認知發展過程中不具自主性，而是靠外在環境建構認知",
+  "group_text": "",
+  "options": [
+   "甲乙",
+   "乙丁",
+   "丙丁",
+   "甲丙"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "認知發展理論比較",
+  "ref_file": "第二章理論與研究 (1).pptx p.40-50",
+  "verified": true,
+  "note": "",
+  "src_label": "115 學習者發展與適性輔導 第21題",
+  "id": "Q064",
+  "explanation": {
+   "right": "皮亞傑與布魯納都主張兒童是主動建構者（甲、丙正確）；行為學派不談「認知結構」建構（乙不精確）；維高斯基強調社會互動但並不認為兒童無自主性（丁錯）。",
+   "wrong": {
+    "A": "乙錯：行為學派視學習為刺激與反應的連結，並不主張兒童「建構認知結構」；由文化與學習歷程建構認知是維高斯基的社會文化觀。",
+    "B": "乙、丁都不正確。",
+    "C": "丁錯：維高斯基強調社會互動，但兒童在互動中仍是主動的參與者。"
+   },
+   "tip": "皮亞傑、布魯納：主動建構；維高斯基：社會互動中的主動。"
+  },
+  "sources": [
+   {
+    "label": "115 學習者發展與適性輔導 第21題",
+    "subject": "學習者發展與適性輔導",
+    "year": "115",
+    "qno": "21"
+   }
+  ]
+ },
+ {
+  "year": "115",
+  "subject": "學習者發展與適性輔導",
+  "qno": "22",
+  "chapter": [
+   2
+  ],
+  "stem": "下列哪一個例子最能完整反映班度拉(A. Bandura)的三元交互因果關係？",
+  "group_text": "",
+  "options": [
+   "小安的數學老師很鼓勵她多做數學題，並且適時給予獎勵和輔導，這讓小安的數學能力越來越好",
+   "父母經常讚美小辰在學習上的努力，不但讓小辰對學習更有信心，也讓她調整了自己的學習目標",
+   "小惠具備高學業自我效能，因而努力學習，使得成績優異，獲得老師的讚美後他更認真學習，對學業也更有信心",
+   "小佑對下週段考的成績表現有高度期望，因此努力準備考試，他的努力不但得到老師的高度讚美，也讓父母讚不絕口"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "班杜拉：三元交互因果關係",
+  "ref_file": "第二章理論與研究 (1).pptx p.40",
+  "verified": true,
+  "note": "",
+  "src_label": "115 學習者發展與適性輔導 第22題",
+  "id": "Q065",
+  "explanation": {
+   "right": "小惠的自我效能（個人）→努力學習（行為）→成績與老師讚美（環境）→更努力、更有信心，三者循環互相影響，最完整。",
+   "wrong": {
+    "A": "只呈現環境→行為，單向。",
+    "B": "只呈現環境→個人，缺乏行為。",
+    "D": "偏向期望→行為→環境，沒有雙向回饋。"
+   },
+   "tip": "個人-行為-環境，要看到「循環互相影響」。"
+  },
+  "sources": [
+   {
+    "label": "115 學習者發展與適性輔導 第22題",
+    "subject": "學習者發展與適性輔導",
+    "year": "115",
+    "qno": "22"
+   }
+  ]
+ },
+ {
+  "year": "107",
+  "subject": "教育理念與實務",
+  "qno": "教育心理學例題1",
+  "chapter": [
+   2
+  ],
+  "stem": "數學老師發現，當他要求學生做練習時，同學們都提不起勁來寫，於是他告訴全班同學說：「如果你們能在下課前 10 分鐘寫完練習題，我就讓你們提早下課，無論是去打球或是看小說都可以。」下列哪一個概念較能說明老師使用的策略？",
+  "group_text": "",
+  "options": [
+   "延宕滿足(delay of gratification)",
+   "替代增強(vicarious reinforcement)",
+   "內在增強物(intrinsic reinforcer)",
+   "普墨克原則(Premack principle)"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案（範例題內附）",
+  "concept": "操作制約：普墨克原則",
+  "ref_file": "第二章理論與研究 (1).pptx p.32-38；第一章/兒童發展整理.pdf",
+  "verified": true,
+  "note": "",
+  "src_label": "107 教育理念與實務 第教育心理學例題1題",
+  "id": "Q066",
+  "explanation": {
+   "right": "用學生喜歡的高頻率活動（打球、看小說、提早下課）去增強不喜歡的低頻率活動（寫練習題），就是普墨克原則（Premack principle）。",
+   "wrong": {
+    "A": "延宕滿足是為了更大的長期獎賞而忍住當下的誘惑。",
+    "B": "替代增強是看到別人因行為受到獎勵而增加自己的該行為（班杜拉）。",
+    "C": "內在增強物是活動本身帶來的滿足，這裡是外加的獎勵。"
+   },
+   "tip": "先吃青菜，才能吃布丁。"
+  },
+  "sources": [
+   {
+    "label": "107 教育理念與實務 第教育心理學例題1題",
+    "subject": "教育理念與實務",
+    "year": "107",
+    "qno": "教育心理學例題1"
+   }
+  ]
+ },
+ {
+  "year": "108-1",
+  "subject": "教育理念與實務",
+  "qno": "2",
+  "chapter": [
+   2
+  ],
+  "stem": "下列有關動機的描述，何者符合馬斯洛(A. Maslow)的動機理論？",
+  "group_text": "",
+  "options": [
+   "認知衝突與認知失衡讓人有學習動機",
+   "人有避罰及避免失敗的驅力而投入努力",
+   "要先適度滿足匱乏需求，學生才有成長需求",
+   "給予挑戰性任務，讓學習者覺得有成就感，可促進學習動機"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "馬斯洛：需求層次論",
+  "ref_file": "第二章理論與研究 (1).pptx p.54",
+  "verified": true,
+  "note": "",
+  "src_label": "108-1 教育理念與實務 第2題",
+  "id": "Q067",
+  "explanation": {
+   "right": "馬斯洛主張先適度滿足匱乏需求（生理、安全、愛與歸屬、尊重），個體才會追求成長需求（求知、審美、自我實現）。",
+   "wrong": {
+    "A": "認知衝突與認知失衡是皮亞傑的觀點。",
+    "B": "避罰與避免失敗的驅力是成就動機理論（逃避失敗）的觀點。",
+    "D": "挑戰性任務帶來成就感是成就動機／自我決定論的觀點。"
+   },
+   "tip": "匱乏需求→成長需求，由下而上。"
+  },
+  "sources": [
+   {
+    "label": "108-1 教育理念與實務 第2題",
+    "subject": "教育理念與實務",
+    "year": "108-1",
+    "qno": "2"
+   }
+  ]
+ },
+ {
+  "year": "108-1",
+  "subject": "教育理念與實務",
+  "qno": "3",
+  "chapter": [
+   2,
+   7
+  ],
+  "stem": "媽媽給小靖一片餅乾。小靖說想多吃一點，媽媽便將餅乾剝成兩半後，小靖就覺得他的餅乾變多了。根據皮亞傑(J. Piaget)的觀點，小靖的認知能力正處於哪一個階段？",
+  "group_text": "",
+  "options": [
+   "感覺動作期",
+   "前運思期",
+   "具體運思期",
+   "形式運思期"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：前運思期（缺乏保留概念）",
+  "ref_file": "第七章兒童期早期的生理與認知發展.pptx p.11-14",
+  "verified": true,
+  "note": "",
+  "src_label": "108-1 教育理念與實務 第3題",
+  "id": "Q068",
+  "explanation": {
+   "right": "餅乾剝成兩半就覺得變多，只看到數量（塊數）而沒有守恆概念，屬前運思期。",
+   "wrong": {
+    "A": "感覺動作期（0~2歲）靠感覺與動作認識世界，尚未使用符號思考。",
+    "C": "具體運思期已有守恆概念，不會被塊數欺騙。",
+    "D": "形式運思期能抽象假設推理。"
+   },
+   "tip": "只看一面、看塊數＝前運思期。"
+  },
+  "sources": [
+   {
+    "label": "108-1 教育理念與實務 第3題",
+    "subject": "教育理念與實務",
+    "year": "108-1",
+    "qno": "3"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "教育理念與實務",
+  "qno": "3",
+  "chapter": [
+   2,
+   7
+  ],
+  "stem": "餐桌上有 2 杯一樣多的蘋果汁，媽媽將其中一杯蘋果汁倒入另一個比原來高且瘦的長頸鹿杯子中，這時小明搶著要喝長頸鹿杯子的蘋果汁，小玲覺得沒關係，反正 2 杯蘋果汁一樣多。根據皮亞傑(J. Piaget)的理論，小玲的反應顯示她已經具備下列何者？",
+  "group_text": "",
+  "options": [
+   "類包含(class inclusion)",
+   "守恆概念(conservation)",
+   "知覺集中(perceptual centration)",
+   "命題推理(propositional reasoning)"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：守恆概念",
+  "ref_file": "第七章兒童期早期的生理與認知發展.pptx p.14-16",
+  "verified": true,
+  "note": "",
+  "src_label": "108-2 教育理念與實務 第3題",
+  "id": "Q069",
+  "explanation": {
+   "right": "小玲知道倒入不同形狀的杯子後果汁量仍一樣多，具備守恆（保留）概念。",
+   "wrong": {
+    "A": "類包含是理解類別與子類別的關係（如花與玫瑰），屬具體運思期。",
+    "C": "知覺集中是只看杯子高度，會誤判，小玲沒有。",
+    "D": "命題推理屬形式運思期。"
+   },
+   "tip": "不加不減，只是外形改變＝守恆。"
+  },
+  "sources": [
+   {
+    "label": "108-2 教育理念與實務 第3題",
+    "subject": "教育理念與實務",
+    "year": "108-2",
+    "qno": "3"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "教育理念與實務",
+  "qno": "4",
+  "chapter": [
+   2
+  ],
+  "stem": "張老師在進行教學時，經常會提供學生與其原有知識「矛盾的訊息」，讓學生探究其原因，並提出解釋。下列何者較能詮釋張老師的目的？",
+  "group_text": "",
+  "options": [
+   "提升學生的近側發展區",
+   "引發認知失衡，形成基模的調適",
+   "透過同儕互動提升學生的認知發展",
+   "增進學生前運思期不可逆性思考的能力"
+  ],
+  "answer": "B",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：認知失衡與調適",
+  "ref_file": "第二章理論與研究 (1).pptx p.43-46",
+  "verified": true,
+  "note": "",
+  "src_label": "108-2 教育理念與實務 第4題",
+  "id": "Q070",
+  "explanation": {
+   "right": "提供與原有知識矛盾的訊息會造成認知失衡，迫使學生調適（修正基模）以回到平衡。",
+   "wrong": {
+    "A": "提升近側發展區是維高斯基觀點，要靠成人／同儕引導。",
+    "C": "同儕互動促進發展偏維高斯基的社會文化觀。",
+    "D": "增進不可逆性思考不是目標，前運思期反而是缺乏可逆性。"
+   },
+   "tip": "矛盾訊息→失衡→調適→新平衡。"
+  },
+  "sources": [
+   {
+    "label": "108-2 教育理念與實務 第4題",
+    "subject": "教育理念與實務",
+    "year": "108-2",
+    "qno": "4"
+   }
+  ]
+ },
+ {
+  "year": "108-2",
+  "subject": "教育理念與實務",
+  "qno": "6",
+  "chapter": [
+   2
+  ],
+  "stem": "下列何種做法較不符合維高斯基(L. Vygotsky)的認知發展論？",
+  "group_text": "",
+  "options": [
+   "鼓勵學生的私自話語(private speech)",
+   "提供學生學習的鷹架(scaffolding)",
+   "重視學生在他人協助下最大的可能表現",
+   "強調學生動手操作，從經驗中學習新知識"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "維高斯基 vs. 皮亞傑",
+  "ref_file": "第二章理論與研究 (1).pptx p.47-49",
+  "verified": true,
+  "note": "",
+  "src_label": "108-2 教育理念與實務 第6題",
+  "id": "Q071",
+  "explanation": {
+   "right": "「強調動手操作，從經驗中學習」是皮亞傑（建構、活動學習）的主張，不符合維高斯基的社會文化論。",
+   "wrong": {
+    "A": "鼓勵私我語言符合維高斯基。",
+    "B": "提供鷹架符合維高斯基。",
+    "C": "重視在他人協助下的最大可能表現就是ZPD，符合維高斯基。"
+   },
+   "tip": "皮亞傑：自己動手；維高斯基：別人幫、對話、鷹架。"
+  },
+  "sources": [
+   {
+    "label": "108-2 教育理念與實務 第6題",
+    "subject": "教育理念與實務",
+    "year": "108-2",
+    "qno": "6"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "教育理念與實務",
+  "qno": "1",
+  "chapter": [
+   2,
+   7
+  ],
+  "stem": "三歲謙謙與媽媽通電話時，以點頭回答媽媽的問話。雖然彼此看不到，但謙謙認為媽媽知道他的回應。謙謙的行為符合皮亞傑(J. Piaget)發展理論的哪一個概念？",
+  "group_text": "",
+  "options": [
+   "物體恆存",
+   "心像保留",
+   "自我中心",
+   "知覺集中"
+  ],
+  "answer": "C",
+  "answer_source": "公告答案",
+  "concept": "皮亞傑：自我中心（前運思期）",
+  "ref_file": "第七章兒童期早期的生理與認知發展.pptx p.23-24",
+  "verified": true,
+  "note": "",
+  "src_label": "109 教育理念與實務 第1題",
+  "id": "Q072",
+  "explanation": {
+   "right": "三歲的謙謙以為對方看得到自己點頭，是自我中心：以為別人的觀點與自己相同。",
+   "wrong": {
+    "A": "物體恆存是知道物體不在眼前仍存在。",
+    "B": "「心像保留」不是題幹所述概念。",
+    "D": "知覺集中是只注意事物的單一面向。"
+   },
+   "tip": "以為「我看得到的你也看得到」＝自我中心。"
+  },
+  "sources": [
+   {
+    "label": "109 教育理念與實務 第1題",
+    "subject": "教育理念與實務",
+    "year": "109",
+    "qno": "1"
+   }
+  ]
+ },
+ {
+  "year": "108-1",
+  "subject": "課程教學與評量",
+  "qno": "16",
+  "chapter": [
+   2
+  ],
+  "stem": "小魚在班上的不適當行為越來越明顯，特別是講話不禮貌的行為，如：頂嘴、說髒話等，已經造成教師教學的困擾，也影響小魚的人際關係。王老師欲以行為塑造法來輔導，其行為塑造法的實施步驟依序為何？甲、安排後果乙、測定基線丙、評估效果丁、選擇增強物戊、確定目標行為",
+  "group_text": "",
+  "options": [
+   "乙→丁→丙→戊→甲",
+   "乙→丙→戊→甲→丁",
+   "戊→甲→乙→丁→丙",
+   "戊→乙→丁→甲→丙"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "操作制約：行為塑造的步驟",
+  "ref_file": "第二章理論與研究 (1).pptx p.38",
+  "verified": true,
+  "note": "",
+  "src_label": "108-1 課程教學與評量 第16題",
+  "id": "Q073",
+  "explanation": {
+   "right": "行為塑造的順序：確定目標行為（戊）→測定基線（乙）→選擇增強物（丁）→安排後果、實施（甲）→評估效果（丙）。",
+   "wrong": {
+    "A": "基線之前應先確定目標行為。",
+    "B": "評估效果應在最後。",
+    "C": "安排後果不能在測基線之前。"
+   },
+   "tip": "目標→基線→增強物→實施→評估。"
+  },
+  "sources": [
+   {
+    "label": "108-1 課程教學與評量 第16題",
+    "subject": "課程教學與評量",
+    "year": "108-1",
+    "qno": "16"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "課程教學與評量",
+  "qno": "5",
+  "chapter": [
+   2
+  ],
+  "stem": "有關教師的處置方式，下列何者較屬於負增強？",
+  "group_text": "",
+  "options": [
+   "學生在上課玩橡皮筋，老師將他的橡皮筋沒收",
+   "兩位學生在課堂上相互推擠，老師把兩位學生的座位分開",
+   "學生未完成老師交代的回家作業，老師要求學生利用下課時間完成",
+   "老師讓生字作業寫漂亮且正確的同學，下次生字從一行減少為半行"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "操作制約：負增強",
+  "ref_file": "增強方式與處罰例子說明1121004.docx",
+  "verified": true,
+  "note": "",
+  "src_label": "109 課程教學與評量 第5題",
+  "id": "Q074",
+  "explanation": {
+   "right": "寫得漂亮正確就把作業量由一行減為半行，是移除（減輕）厭惡刺激以增加好的行為，屬負增強。",
+   "wrong": {
+    "A": "沒收橡皮筋是拿走喜愛之物，屬剝奪式懲罰。",
+    "B": "把兩人座位分開是為制止衝突的管理措施，目的是減少行為，屬處理／處罰，不是增加好行為。",
+    "C": "要求下課時間完成是拿走喜愛的下課時間，屬剝奪式懲罰。"
+   },
+   "tip": "負增強＝減輕負擔來鼓勵好行為。"
+  },
+  "sources": [
+   {
+    "label": "109 課程教學與評量 第5題",
+    "subject": "課程教學與評量",
+    "year": "109",
+    "qno": "5"
+   }
+  ]
+ },
+ {
+  "year": "109",
+  "subject": "課程教學與評量",
+  "qno": "6",
+  "chapter": [
+   2
+  ],
+  "stem": "下列哪一項不屬於社會學習理論中的模仿行為？",
+  "group_text": "",
+  "options": [
+   "看到老師天天中午刷牙，欣美也帶牙刷到學校跟著一起刷牙",
+   "看到正泰字寫漂亮被老師口頭讚美，榮華也努力把字寫好看",
+   "仁美看到同學們都很早到學校，於是也跟著早一點起床上學",
+   "老師說抽菸對身體不好，忠明爸爸接受忠明的勸告開始戒菸"
+  ],
+  "answer": "D",
+  "answer_source": "公告答案",
+  "concept": "班杜拉：社會學習（觀察與模仿）",
+  "ref_file": "第二章理論與研究 (1).pptx p.40",
+  "verified": true,
+  "note": "",
+  "src_label": "109 課程教學與評量 第6題",
+  "id": "Q075",
+  "explanation": {
+   "right": "忠明爸爸是接受兒子口頭勸告而戒菸，屬聽從言語勸導，不是觀察榜樣後的模仿。",
+   "wrong": {
+    "A": "看到老師天天刷牙而模仿，屬觀察學習。",
+    "B": "看到別人寫字受讚美而努力，屬替代增強的觀察學習。",
+    "C": "看到同學早到而模仿，屬觀察學習。"
+   },
+   "tip": "模仿＝看到示範行為而做出類似行為。"
+  },
+  "sources": [
+   {
+    "label": "109 課程教學與評量 第6題",
+    "subject": "課程教學與評量",
+    "year": "109",
+    "qno": "6"
+   }
+  ]
+ },
+ {
+  "year": "110",
+  "subject": "課程教學與評量",
+  "qno": "5",
+  "chapter": [
+   2
+  ],
+  "stem": "下列何者是幫學生「搭鷹架」(scaffolding)的做法？",
+  "group_text": "",
+  "options": [
+   "示範舉例",
+   "直接教學",
+   "設定目標",
+   "實施安置性測驗"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "維高斯基：鷹架作用",
+  "ref_file": "第二章理論與研究 (1).pptx p.49",
+  "verified": true,
+  "note": "",
+  "src_label": "110 課程教學與評量 第5題",
+  "id": "Q076",
+  "explanation": {
+   "right": "鷹架是成人或同儕在ZPD內提供的暫時性支持，例如示範舉例、提示、提問，之後逐步撤除。",
+   "wrong": {
+    "B": "直接教學是直接告訴答案，沒有逐步撤除。",
+    "C": "設定目標是教學計畫要素，不是鷹架。",
+    "D": "安置性測驗用於教學前分組或安置。"
+   },
+   "tip": "鷹架＝示範、提示、提問，之後撤除。"
+  },
+  "sources": [
+   {
+    "label": "110 課程教學與評量 第5題",
+    "subject": "課程教學與評量",
+    "year": "110",
+    "qno": "5"
+   }
+  ]
+ },
+ {
+  "year": "111",
+  "subject": "課程教學與評量",
+  "qno": "7",
+  "chapter": [
+   2
+  ],
+  "stem": "數位學習軟體中，只要學生答對一題問題，遊戲中的角色就會獲得代幣及經驗值。這是應用了哪一種學習理論？",
+  "group_text": "",
+  "options": [
+   "行為主義",
+   "認知理論",
+   "社會建構主義",
+   "訊息處理理論"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "行為主義：代幣制度（增強）",
+  "ref_file": "第二章理論與研究 (1).pptx p.38",
+  "verified": true,
+  "note": "",
+  "src_label": "111 課程教學與評量 第7題",
+  "id": "Q077",
+  "explanation": {
+   "right": "答對題就獲得代幣與經驗值，是以增強物（代幣）強化正確行為，屬行為主義。",
+   "wrong": {
+    "B": "認知理論重視理解與心智歷程。",
+    "C": "社會建構主義重視社會互動中建構意義。",
+    "D": "訊息處理理論重視注意、記憶、編碼等歷程。"
+   },
+   "tip": "答對→給代幣＝行為主義的增強。"
+  },
+  "sources": [
+   {
+    "label": "111 課程教學與評量 第7題",
+    "subject": "課程教學與評量",
+    "year": "111",
+    "qno": "7"
+   }
+  ]
+ },
+ {
+  "year": "111",
+  "subject": "課程教學與評量",
+  "qno": "10",
+  "chapter": [
+   2
+  ],
+  "stem": "下列教學活動，何者不符合鷹架教學(scaffolding)的主張？",
+  "group_text": "",
+  "options": [
+   "讓學生在場域中獨立觀察做紀錄",
+   "教師提供示範，讓學生觀摩學習",
+   "教師提供資料，引導學生進行討論",
+   "進行異質分組後，引導學生共同探究"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "維高斯基：鷹架作用",
+  "ref_file": "第二章理論與研究 (1).pptx p.49",
+  "verified": true,
+  "note": "",
+  "src_label": "111 課程教學與評量 第10題",
+  "id": "Q078",
+  "explanation": {
+   "right": "鷹架需要有人提供支持。「讓學生獨立觀察做紀錄」沒有任何支持，不符合鷹架教學。",
+   "wrong": {
+    "B": "教師示範是鷹架。",
+    "C": "教師提供資料並引導討論是鷹架。",
+    "D": "異質分組後引導共同探究是同儕＋教師的鷹架。"
+   },
+   "tip": "沒人幫忙的獨立作業≠鷹架。"
+  },
+  "sources": [
+   {
+    "label": "111 課程教學與評量 第10題",
+    "subject": "課程教學與評量",
+    "year": "111",
+    "qno": "10"
+   }
+  ]
+ },
+ {
+  "year": "113",
+  "subject": "課程教學與評量",
+  "qno": "17",
+  "chapter": [
+   2
+  ],
+  "stem": "成功國小每學期辦理「百工達人」講座，邀請各行各業的校友返校分享，分享內容包括個人職業探索的歷程、工作介紹與甘苦談等。此活動立基於下列哪項教學理論的應用？",
+  "group_text": "",
+  "options": [
+   "社會學習理論",
+   "認知發展理論",
+   "適性化教學理論",
+   "建構主義學習理論"
+  ],
+  "answer": "A",
+  "answer_source": "公告答案",
+  "concept": "班杜拉：社會學習理論（楷模學習）",
+  "ref_file": "第二章理論與研究 (1).pptx p.40",
+  "verified": true,
+  "note": "",
+  "src_label": "113 課程教學與評量 第17題",
+  "id": "Q079",
+  "explanation": {
+   "right": "邀請各行各業校友分享，讓學生觀察楷模、模仿學習，立基於社會學習理論。",
+   "wrong": {
+    "B": "認知發展理論重視階段性的認知結構。",
+    "C": "適性化教學理論重視依個別差異調整教學。",
+    "D": "建構主義重視學習者主動建構意義。"
+   },
+   "tip": "榜樣、楷模、觀察模仿＝班杜拉。"
+  },
+  "sources": [
+   {
+    "label": "113 課程教學與評量 第17題",
+    "subject": "課程教學與評量",
+    "year": "113",
+    "qno": "17"
+   }
+  ]
+ },
+ {
+  "year": "94（講義標示）",
+  "subject": "講義",
+  "qno": "腦1",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "副交感神經系統常使個體在鬆弛狀態時發生作用，而交感神經則在個體緊張而警覺時發生作用，支配這兩種功能上有拮抗作用的是腦中的哪個部分？",
+  "group_text": "",
+  "options": [
+   "視丘",
+   "下視丘",
+   "邊緣系統",
+   "大腦皮質"
+  ],
+  "answer": "B",
+  "answer_source": "講義標示",
+  "concept": "下視丘：自律神經系統的管制中樞",
+  "ref_file": "視丘和下視丘.pptx；兒童發展_腦部考古題(無解答版).pptx 第1題（講義另標示為97學年度南區各縣市國民小學暨附設幼稚園教師聯合甄選）",
+  "verified": false,
+  "note": "另標示為「97學年度南區各縣市國民小學暨附設幼稚園教師聯合甄選」（教甄），答案為講義標示，未核對官方公告。",
+  "src_label": "94（講義標示） 講義 第腦1題",
+  "id": "Q080",
+  "explanation": {
+   "right": "下視丘是自律神經系統（交感與副交感）的管制中樞，也調節體溫、攝食、睡眠與內分泌。講義在「視丘和下視丘」簡報中標示答案為B。",
+   "wrong": {
+    "A": "視丘是感覺訊息傳入大腦皮質前的中繼站。",
+    "C": "邊緣系統主管情緒、記憶，下視丘只是其一部分。",
+    "D": "大腦皮質主管高階認知，不直接管制自律神經拮抗。"
+   },
+   "tip": "視丘＝中繼站；下視丘＝自律神經＋內分泌的總管。"
+  },
+  "sources": [
+   {
+    "label": "94（講義標示） 講義 第腦1題",
+    "subject": "講義",
+    "year": "94（講義標示）",
+    "qno": "腦1"
+   }
+  ]
+ },
+ {
+  "year": "94（講義標示）",
+  "subject": "講義",
+  "qno": "腦2",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "大腦哪部分受損會導致個體在理解上沒有問題，但說話卻緩慢無力、語法紊亂？",
+  "group_text": "",
+  "options": [
+   "海馬迴",
+   "腦皮層",
+   "威尼克區",
+   "布洛卡區"
+  ],
+  "answer": "D",
+  "answer_source": "依課本推定",
+  "concept": "布洛卡區（語言表達）",
+  "ref_file": "第四章三歲前的生理發展.pptx p.16；兒童發展_腦部考古題(無解答版).pptx 第2題",
+  "verified": false,
+  "note": "",
+  "src_label": "94（講義標示） 講義 第腦2題",
+  "id": "Q081",
+  "explanation": {
+   "right": "布洛卡區負責語言表達（說話的動作與語法組織），受損時理解正常但說話緩慢費力、語法紊亂。依課本推定為D（未核對公告答案）。",
+   "wrong": {
+    "A": "海馬迴與記憶形成有關。",
+    "B": "腦皮層範圍太廣，題幹是特定區域。",
+    "C": "威尼克區受損是理解障礙，說話流暢但內容混亂。"
+   },
+   "tip": "布洛卡＝「說」（Broca 像 Broke 說不出口）；威尼克＝「聽懂」。"
+  },
+  "sources": [
+   {
+    "label": "94（講義標示） 講義 第腦2題",
+    "subject": "講義",
+    "year": "94（講義標示）",
+    "qno": "腦2"
+   }
+  ]
+ },
+ {
+  "year": "95（講義標示）",
+  "subject": "講義",
+  "qno": "腦3",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "神經原是負責人類神經傳導的細胞，下列何者是腦細胞成長發育的重要工作？",
+  "group_text": "",
+  "options": [
+   "髓鞘化",
+   "腦側化",
+   "細胞減除",
+   "細胞分化"
+  ],
+  "answer": "C",
+  "answer_source": "依課本推定",
+  "concept": "腦細胞發展：細胞減除與髓鞘化",
+  "ref_file": "第四章三歲前的生理發展.pptx p.13；神經細胞發展.docx；兒童發展_腦部考古題(無解答版).pptx 第3題",
+  "verified": false,
+  "note": "答案存疑：(A)與(C)講義皆有提到，請待查證原始公告答案。",
+  "src_label": "95（講義標示） 講義 第腦3題",
+  "id": "Q082",
+  "explanation": {
+   "right": "講義列出腦細胞發展的重要歷程為「細胞減除（細胞凋亡）」與「髓鞘化」。本題(A)(C)皆可能被視為答案，暫依課本推定為C（修剪多餘的神經元與突觸）。",
+   "wrong": {
+    "A": "髓鞘化也是重要歷程，但它是神經纖維絕緣化、加速傳導，題幹強調「腦細胞成長發育」。",
+    "B": "腦側化是功能分工，不是細胞的工作。",
+    "D": "細胞分化在胚胎期主要出現，講義未列為此階段重點。"
+   },
+   "tip": "修剪（細胞減除）＋包膜（髓鞘化）＝神經系統成熟。"
+  },
+  "sources": [
+   {
+    "label": "95（講義標示） 講義 第腦3題",
+    "subject": "講義",
+    "year": "95（講義標示）",
+    "qno": "腦3"
+   }
+  ]
+ },
+ {
+  "year": "96（講義標示）",
+  "subject": "講義",
+  "qno": "腦4",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "大腦中的威尼克區受損會導致下列何種功能損傷？",
+  "group_text": "",
+  "options": [
+   "平衡",
+   "語言理解",
+   "語言表達",
+   "長期記憶"
+  ],
+  "answer": "B",
+  "answer_source": "依課本推定",
+  "concept": "威尼克區（語言理解）",
+  "ref_file": "第四章三歲前的生理發展.pptx p.16；兒童發展_腦部考古題(無解答版).pptx 第4題",
+  "verified": false,
+  "note": "",
+  "src_label": "96（講義標示） 講義 第腦4題",
+  "id": "Q083",
+  "explanation": {
+   "right": "威尼克區位於左顳葉，負責語言理解，受損時聽不懂、說話流暢但內容混亂。",
+   "wrong": {
+    "A": "平衡由小腦與前庭系統負責。",
+    "C": "語言表達是布洛卡區。",
+    "D": "長期記憶與海馬迴有關。"
+   },
+   "tip": "威尼克＝理解；布洛卡＝表達。"
+  },
+  "sources": [
+   {
+    "label": "96（講義標示） 講義 第腦4題",
+    "subject": "講義",
+    "year": "96（講義標示）",
+    "qno": "腦4"
+   }
+  ]
+ },
+ {
+  "year": "96（講義標示）",
+  "subject": "講義",
+  "qno": "腦5",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "對於神經系統發展的描述，下列何者錯誤？",
+  "group_text": "",
+  "options": [
+   "大腦具側化性",
+   "腦神經細胞具可塑性",
+   "神經系統自個體出生後開始發展",
+   "髓鞘化的發展為神經功能成熟的指標"
+  ],
+  "answer": "C",
+  "answer_source": "依課本推定",
+  "concept": "神經系統發展",
+  "ref_file": "第四章三歲前的生理發展.pptx p.13、15、第四章神經細胞發展.docx；兒童發展_腦部考古題(無解答版).pptx 第5題",
+  "verified": false,
+  "note": "",
+  "src_label": "96（講義標示） 講義 第腦5題",
+  "id": "Q084",
+  "explanation": {
+   "right": "神經系統在胚胎期（懷孕期間）就開始發展，不是出生後才開始，故(C)錯誤。",
+   "wrong": {
+    "A": "腦側化（左右腦功能分工）是大腦的特性。",
+    "B": "神經可塑性是大腦受經驗而改變的能力。",
+    "D": "髓鞘化程度是神經功能成熟的重要指標。"
+   },
+   "tip": "神經系統從胚胎就開始，出生後只是繼續成熟。"
+  },
+  "sources": [
+   {
+    "label": "96（講義標示） 講義 第腦5題",
+    "subject": "講義",
+    "year": "96（講義標示）",
+    "qno": "腦5"
+   }
+  ]
+ },
+ {
+  "year": "97（講義標示）",
+  "subject": "講義",
+  "qno": "腦6",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "十歲的小智腦中的海馬迴嚴重受損，他最可能出現的是下列哪一項問題？",
+  "group_text": "",
+  "options": [
+   "無法記憶新訊息",
+   "身體動作不協調",
+   "無法控制情緒",
+   "喪失食慾"
+  ],
+  "answer": "A",
+  "answer_source": "依課本推定",
+  "concept": "海馬迴：記憶",
+  "ref_file": "海馬迴.pptx；邊緣系統.pptx；兒童發展_腦部考古題(無解答版).pptx 第6題",
+  "verified": false,
+  "note": "",
+  "src_label": "97（講義標示） 講義 第腦6題",
+  "id": "Q085",
+  "explanation": {
+   "right": "海馬迴與長期記憶的形成有關，受損後難以記住新訊息。",
+   "wrong": {
+    "B": "動作不協調較與小腦、基底核有關。",
+    "C": "無法控制情緒較與杏仁核、前額葉有關。",
+    "D": "食慾由下視丘調節。"
+   },
+   "tip": "海馬迴＝記憶入口。"
+  },
+  "sources": [
+   {
+    "label": "97（講義標示） 講義 第腦6題",
+    "subject": "講義",
+    "year": "97（講義標示）",
+    "qno": "腦6"
+   }
+  ]
+ },
+ {
+  "year": "97（講義標示）",
+  "subject": "講義",
+  "qno": "腦7",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "有關大腦額葉的敘述何者正確？",
+  "group_text": "",
+  "options": [
+   "額葉在成熟人的年紀並無明顯相關",
+   "約在兒童時期，額葉的發展已達成熟",
+   "額葉是大腦的總裁，協調各部位活動",
+   "神經通路髓鞘會減慢神經訊號的傳導速度"
+  ],
+  "answer": "C",
+  "answer_source": "依課本推定",
+  "concept": "額葉的功能與成熟時間",
+  "ref_file": "第四章三歲前的生理發展.pptx p.12-13；兒童發展_腦部考古題(無解答版).pptx 第7題",
+  "verified": false,
+  "note": "選項(A)原文字有缺漏，已依上下文整理為「成熟人的年紀」。",
+  "src_label": "97（講義標示） 講義 第腦7題",
+  "id": "Q086",
+  "explanation": {
+   "right": "額葉（尤其前額葉）負責計畫、決策、抑制與協調，像大腦的總裁。",
+   "wrong": {
+    "A": "額葉功能與成人行為、判斷密切相關。",
+    "B": "額葉要到青春期甚至成年早期才成熟。",
+    "D": "髓鞘化會加快神經訊號傳導速度，不是減慢。"
+   },
+   "tip": "額葉＝總裁，最晚熟。"
+  },
+  "sources": [
+   {
+    "label": "97（講義標示） 講義 第腦7題",
+    "subject": "講義",
+    "year": "97（講義標示）",
+    "qno": "腦7"
+   }
+  ]
+ },
+ {
+  "year": "98（講義標示）",
+  "subject": "講義",
+  "qno": "腦8",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "小強因意外事件損傷了大腦，自此，情緒和個性有了極大的轉變。其大腦受損最可能的是哪一個部位？",
+  "group_text": "",
+  "options": [
+   "顳葉",
+   "頂葉",
+   "額葉",
+   "枕葉"
+  ],
+  "answer": "C",
+  "answer_source": "依課本推定",
+  "concept": "額葉與人格情緒",
+  "ref_file": "第四章三歲前的生理發展.pptx p.12-13；兒童發展_腦部考古題(無解答版).pptx 第8題",
+  "verified": false,
+  "note": "",
+  "src_label": "98（講義標示） 講義 第腦8題",
+  "id": "Q087",
+  "explanation": {
+   "right": "額葉（前額葉）與人格、情緒調節、判斷有關，受損時個性與情緒常有明顯改變。",
+   "wrong": {
+    "A": "顳葉：聽覺、語言理解、記憶。",
+    "B": "頂葉：體感覺與空間。",
+    "D": "枕葉：視覺。"
+   },
+   "tip": "性格大變看額葉（Phineas Gage 案例）。"
+  },
+  "sources": [
+   {
+    "label": "98（講義標示） 講義 第腦8題",
+    "subject": "講義",
+    "year": "98（講義標示）",
+    "qno": "腦8"
+   }
+  ]
+ },
+ {
+  "year": "99（講義標示）",
+  "subject": "講義",
+  "qno": "腦9",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "當小強在學習語文時努力背誦，演算數學及對困難問題用心思考，這類高級心理活動，是由大腦皮質層中哪一部分來管控？",
+  "group_text": "",
+  "options": [
+   "額葉",
+   "頂葉",
+   "顳葉",
+   "枕葉"
+  ],
+  "answer": "A",
+  "answer_source": "依課本推定",
+  "concept": "額葉：高階認知",
+  "ref_file": "第四章三歲前的生理發展.pptx p.12-13；兒童發展_腦部考古題(無解答版).pptx 第9題",
+  "verified": false,
+  "note": "題幹中「高及心理活動」原文有誤字，已更正為「高級心理活動」。",
+  "src_label": "99（講義標示） 講義 第腦9題",
+  "id": "Q088",
+  "explanation": {
+   "right": "背誦、運算、思考解題等高階心智活動由額葉（前額葉）管控。",
+   "wrong": {
+    "B": "頂葉主管體感覺與空間。",
+    "C": "顳葉主管聽覺與語言理解。",
+    "D": "枕葉主管視覺。"
+   },
+   "tip": "高階思考＝額葉。"
+  },
+  "sources": [
+   {
+    "label": "99（講義標示） 講義 第腦9題",
+    "subject": "講義",
+    "year": "99（講義標示）",
+    "qno": "腦9"
+   }
+  ]
+ },
+ {
+  "year": "99（講義標示）",
+  "subject": "講義",
+  "qno": "腦10",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "小芬因為期末考快到了而經常失眠。媽媽了解狀況後，便告訴小芬要調適心情，放鬆身體。此時小芬需要依賴下列那一種系統下達指令，以達到前述目的？",
+  "group_text": "",
+  "options": [
+   "運動交感神經",
+   "感覺神經系統",
+   "交感神經系統",
+   "副交感神經系統"
+  ],
+  "answer": "D",
+  "answer_source": "依課本推定",
+  "concept": "自律神經：副交感神經",
+  "ref_file": "視丘和下視丘.pptx；兒童發展_腦部考古題(無解答版).pptx 第10題",
+  "verified": false,
+  "note": "題幹末句原文被截斷，「以達到前述目的」為依上下文補全。",
+  "src_label": "99（講義標示） 講義 第腦10題",
+  "id": "Q089",
+  "explanation": {
+   "right": "放鬆、鬆弛的狀態由副交感神經系統作用（降低心跳、促進休息）。",
+   "wrong": {
+    "A": "運動交感神經不是標準分類。",
+    "B": "感覺神經系統負責傳入感覺，不是調節放鬆。",
+    "C": "交感神經系統在緊張、警覺時作用。"
+   },
+   "tip": "副交感＝休息消化；交感＝戰或逃。"
+  },
+  "sources": [
+   {
+    "label": "99（講義標示） 講義 第腦10題",
+    "subject": "講義",
+    "year": "99（講義標示）",
+    "qno": "腦10"
+   }
+  ]
+ },
+ {
+  "year": "100（講義標示）",
+  "subject": "講義",
+  "qno": "腦11",
+  "chapter": [
+   2,
+   3
+  ],
+  "stem": "下列哪一位學者認為神經系統的成熟與環境的適應，會使兒童的思維方式從僵化、無邏輯進展到變通、合邏輯？",
+  "group_text": "",
+  "options": [
+   "皮亞傑",
+   "杭士基",
+   "維高斯基",
+   "史坦伯格"
+  ],
+  "answer": "A",
+  "answer_source": "依課本推定",
+  "concept": "皮亞傑：成熟與適應",
+  "ref_file": "第二章理論與研究 (1).pptx p.43-47；兒童發展_腦部考古題(無解答版).pptx 第11題",
+  "verified": false,
+  "note": "",
+  "src_label": "100（講義標示） 講義 第腦11題",
+  "id": "Q090",
+  "explanation": {
+   "right": "皮亞傑認為認知發展來自神經系統成熟與環境適應（同化、調適）的交互作用，並依序進入各運思期。",
+   "wrong": {
+    "B": "杭士基談語言先天論（語言習得裝置）。",
+    "C": "維高斯基強調社會文化與語言互動。",
+    "D": "史坦伯格提出智力三元論。"
+   },
+   "tip": "成熟＋適應＝皮亞傑。"
+  },
+  "sources": [
+   {
+    "label": "100（講義標示） 講義 第腦11題",
+    "subject": "講義",
+    "year": "100（講義標示）",
+    "qno": "腦11"
+   }
+  ]
+ },
+ {
+  "year": "100（講義標示）",
+  "subject": "講義",
+  "qno": "腦12",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "小安平日上課無法專心聽課太久，媽媽帶他去看兒科醫生。醫生檢查後，告知媽媽一切正常，並說小安不能專心的現象會隨其成長而改善。下列哪一項生理改變最能支持醫生的觀點？",
+  "group_text": "",
+  "options": [
+   "杏仁核會隨年長而功能增強",
+   "血清素濃度會隨年長而增加",
+   "大腦的海馬迴會隨年長而變大",
+   "大腦的網狀結構會隨年長而髓鞘化"
+  ],
+  "answer": "D",
+  "answer_source": "講義標示",
+  "concept": "網狀結構：注意力與髓鞘化",
+  "ref_file": "網狀結構.pptx（講義標示答案D，100年度教檢）；兒童發展_腦部考古題(無解答版).pptx 第12題",
+  "verified": false,
+  "note": "",
+  "src_label": "100（講義標示） 講義 第腦12題",
+  "id": "Q091",
+  "explanation": {
+   "right": "網狀結構負責維持清醒與選擇性注意，隨年齡增長髓鞘化後，注意力維持能力隨之提升。",
+   "wrong": {
+    "A": "杏仁核主管恐懼等情緒，與注意力維持無關。",
+    "B": "血清素濃度隨年齡增長是下降，不是增加。",
+    "C": "海馬迴主管記憶，且題幹重點不在記憶。"
+   },
+   "tip": "網狀結構＝注意力閘門，髓鞘化後變穩。"
+  },
+  "sources": [
+   {
+    "label": "100（講義標示） 講義 第腦12題",
+    "subject": "講義",
+    "year": "100（講義標示）",
+    "qno": "腦12"
+   }
+  ]
+ },
+ {
+  "year": "101（講義標示）",
+  "subject": "講義",
+  "qno": "腦13",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "關於人的大腦皮質之敘述，下列何者正確？",
+  "group_text": "",
+  "options": [
+   "額葉負責思考、概念的形成、計畫執行",
+   "頂葉負責對視覺訊息進行深入的分析處理",
+   "顳葉掌管動作、方向、計算和物體辨認等功能",
+   "枕葉負責處理聲音、語言理解及輸入的感覺訊息"
+  ],
+  "answer": "A",
+  "answer_source": "依課本推定",
+  "concept": "大腦皮質四葉的功能",
+  "ref_file": "第四章三歲前的生理發展.pptx p.12-13；兒童發展_腦部考古題(無解答版).pptx 第13題",
+  "verified": false,
+  "note": "",
+  "src_label": "101（講義標示） 講義 第腦13題",
+  "id": "Q092",
+  "explanation": {
+   "right": "額葉負責思考、概念形成與計畫執行。",
+   "wrong": {
+    "B": "視覺深入處理主要在枕葉（及相關連合區），頂葉主管體感覺與空間。",
+    "C": "動作、方向、計算偏頂葉／額葉，不是顳葉。",
+    "D": "聲音與語言理解屬顳葉，枕葉是視覺。"
+   },
+   "tip": "額思考、頂體感、顳聽語、枕視覺。"
+  },
+  "sources": [
+   {
+    "label": "101（講義標示） 講義 第腦13題",
+    "subject": "講義",
+    "year": "101（講義標示）",
+    "qno": "腦13"
+   }
+  ]
+ },
+ {
+  "year": "102（講義標示）",
+  "subject": "講義",
+  "qno": "腦14",
+  "chapter": [
+   4
+  ],
+  "stem": "就讀國小二年級的小鋼不喜歡別人碰他的身體，對搔癢、擁抱及赤腳走在草地上等都很敏感。從感覺統合訓練的觀點，小鋼可能有哪種感覺統合失調的現象？",
+  "group_text": "",
+  "options": [
+   "運動神經",
+   "視覺與聽覺",
+   "觸覺防衛",
+   "大腦前庭系統"
+  ],
+  "answer": "C",
+  "answer_source": "依課本推定",
+  "concept": "觸覺防衛（感覺統合）",
+  "ref_file": "第四章三歲前的生理發展.pptx p.19；兒童發展_腦部考古題(無解答版).pptx 第14題",
+  "verified": false,
+  "note": "感覺統合屬補充概念，講義僅在第4章感覺發展簡述。",
+  "src_label": "102（講義標示） 講義 第腦14題",
+  "id": "Q093",
+  "explanation": {
+   "right": "對輕觸、擁抱、搔癢、草地過度敏感，是觸覺防衛（觸覺過度敏感）。",
+   "wrong": {
+    "A": "運動神經與動作執行有關。",
+    "B": "視覺聽覺失調表現為視聽處理困難。",
+    "D": "前庭系統失調表現為平衡、暈眩、動作協調問題。"
+   },
+   "tip": "怕碰、怕癢＝觸覺防衛。"
+  },
+  "sources": [
+   {
+    "label": "102（講義標示） 講義 第腦14題",
+    "subject": "講義",
+    "year": "102（講義標示）",
+    "qno": "腦14"
+   }
+  ]
+ },
+ {
+  "year": "（年度不明，講義標示為「9年」）",
+  "subject": "講義",
+  "qno": "腦15",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "大腦的結構中，下列哪一區域與情緒及記憶有關？",
+  "group_text": "",
+  "options": [
+   "小腦",
+   "基底核",
+   "邊緣系統",
+   "威尼克區"
+  ],
+  "answer": "C",
+  "answer_source": "依課本推定",
+  "concept": "邊緣系統：情緒與記憶",
+  "ref_file": "邊緣系統.pptx；兒童發展_腦部考古題(無解答版).pptx 第15題",
+  "verified": false,
+  "note": "講義年度標示為「9年」，疑為誤植，年度存疑。",
+  "src_label": "（年度不明，講義標示為「9年」） 講義 第腦15題",
+  "id": "Q094",
+  "explanation": {
+   "right": "邊緣系統（杏仁核、海馬迴等）參與情緒、記憶與學習。",
+   "wrong": {
+    "A": "小腦主管平衡與動作協調。",
+    "B": "基底核主管自主運動控制。",
+    "D": "威尼克區是語言理解區。"
+   },
+   "tip": "邊緣系統＝情緒＋記憶。"
+  },
+  "sources": [
+   {
+    "label": "（年度不明，講義標示為「9年」） 講義 第腦15題",
+    "subject": "講義",
+    "year": "（年度不明，講義標示為「9年」）",
+    "qno": "腦15"
+   }
+  ]
+ },
+ {
+  "year": "103（講義標示）",
+  "subject": "講義",
+  "qno": "腦16",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "下列何者是神經元細胞本體的延伸構造，其主要功能為接收來自其他神經元的訊息？",
+  "group_text": "",
+  "options": [
+   "髓鞘",
+   "樹突",
+   "軸突",
+   "膠原細胞"
+  ],
+  "answer": "B",
+  "answer_source": "講義標示",
+  "concept": "神經元結構：樹突",
+  "ref_file": "神經元結構.pptx（講義標示答案B）；兒童發展_腦部考古題(無解答版).pptx 第16題",
+  "verified": false,
+  "note": "",
+  "src_label": "103（講義標示） 講義 第腦16題",
+  "id": "Q095",
+  "explanation": {
+   "right": "樹突從細胞本體伸出，呈放射狀，負責接收其他神經元的訊息。",
+   "wrong": {
+    "A": "髓鞘包覆軸突，加速傳導。",
+    "C": "軸突負責把訊息傳出。",
+    "D": "膠原（神經膠質）細胞提供支持、營養與形成髓鞘。"
+   },
+   "tip": "樹突＝進（收訊），軸突＝出（傳訊）。"
+  },
+  "sources": [
+   {
+    "label": "103（講義標示） 講義 第腦16題",
+    "subject": "講義",
+    "year": "103（講義標示）",
+    "qno": "腦16"
+   }
+  ]
+ },
+ {
+  "year": "103（講義標示）",
+  "subject": "講義",
+  "qno": "腦17",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "有關胼胝體的敘述，下列何者正確？",
+  "group_text": "",
+  "options": [
+   "胼胝體掌控賀爾蒙的分泌",
+   "男孩的胼胝體大於女孩的胼胝體",
+   "胼胝體的大小與口語流暢能力有關",
+   "胼胝體的主要功能是控制意識形態和反射"
+  ],
+  "answer": "C",
+  "answer_source": "講義標示",
+  "concept": "胼胝體：連結左右腦半球",
+  "ref_file": "胼胝體.pptx（講義標示答案C）；兒童發展_腦部考古題(無解答版).pptx 第17題",
+  "verified": false,
+  "note": "性別差異研究有爭議，講義也提示要從性別觀點檢討此類研究。",
+  "src_label": "103（講義標示） 講義 第腦17題",
+  "id": "Q096",
+  "explanation": {
+   "right": "胼胝體連結左右腦半球；講義指出胼胝體較大與口語表達流暢相關，故(C)為講義答案。",
+   "wrong": {
+    "A": "賀爾蒙分泌由下視丘／腦下垂體等負責。",
+    "B": "講義提到的是女性胼胝體較大，且該研究在性別觀點上有爭議。",
+    "D": "意識形態和反射不是胼胝體的主要功能。"
+   },
+   "tip": "胼胝體＝兩個半腦的橋。"
+  },
+  "sources": [
+   {
+    "label": "103（講義標示） 講義 第腦17題",
+    "subject": "講義",
+    "year": "103（講義標示）",
+    "qno": "腦17"
+   }
+  ]
+ },
+ {
+  "year": "104（講義標示）",
+  "subject": "講義",
+  "qno": "腦18",
+  "chapter": [
+   3,
+   4
+  ],
+  "stem": "有關人類正常的腦神經系統發展，下列敘述何者不正確？",
+  "group_text": "",
+  "options": [
+   "人類的神經細胞是有可能再生的",
+   "腦側化的歷程在出生前即已開始",
+   "髓鞘化的歷程在出生後數年內進展快速，在青春期之前結束",
+   "視覺、聽覺區神經細胞的突觸密度在學齡期前便已達到顛峰"
+  ],
+  "answer": "C",
+  "answer_source": "講義標示",
+  "concept": "腦神經系統發展",
+  "ref_file": "腦側化.pptx；神經細胞發展.docx（講義標示答案C，104年教檢國小）",
+  "verified": false,
+  "note": "選項(A)的科學說法有爭議，請以講義標示答案(C)為準。",
+  "src_label": "104（講義標示） 講義 第腦18題",
+  "id": "Q097",
+  "explanation": {
+   "right": "(C)錯誤：髓鞘化在出生後快速進行，但額葉等區域的髓鞘化要延續到青春期甚至成年早期，不是青春期前結束。",
+   "wrong": {
+    "A": "講義題目判定為正確敘述（神經細胞再生的可能性，講義答案未視為錯誤）。",
+    "B": "腦側化在出生前即已開始，講義判定正確。",
+    "D": "視覺、聽覺區突觸密度在學齡前達高峰，講義判定正確。"
+   },
+   "tip": "前額葉的髓鞘化最晚，延續到青春期之後。"
+  },
+  "sources": [
+   {
+    "label": "104（講義標示） 講義 第腦18題",
+    "subject": "講義",
+    "year": "104（講義標示）",
+    "qno": "腦18"
+   }
+  ]
+ },
+ {
+  "year": "講義例題（未標年度）",
+  "subject": "講義",
+  "qno": "第二章p.15",
+  "chapter": [
+   2
+  ],
+  "stem": "根據佛洛依德的心理分析發展論，一個人若是成年後做事雜亂無章，常源於那一時期缺乏訓練，才導致失序和雜亂的現象？",
+  "group_text": "",
+  "options": [
+   "口腔期",
+   "肛門期",
+   "性器期",
+   "性潛伏期"
+  ],
+  "answer": "B",
+  "answer_source": "講義標示",
+  "concept": "佛洛伊德：肛門期的固著",
+  "ref_file": "第二章理論與研究 (1).pptx p.10、15",
+  "verified": false,
+  "note": "",
+  "src_label": "講義例題（未標年度） 講義 第第二章p.15題",
+  "id": "Q098",
+  "explanation": {
+   "right": "肛門期（約1.5~3歲）是大小便訓練期；訓練不足易導致失序、雜亂，過度嚴格則易潔癖、僵化。",
+   "wrong": {
+    "A": "口腔期不足／過度：咬指甲、苛刻、暴食。",
+    "C": "性器期：戀母／戀父情結與性別認同。",
+    "D": "性潛伏期：性衝動壓抑、專注學習與社會化。"
+   },
+   "tip": "雜亂（不足）／潔癖（嚴格）都是肛門期。"
+  },
+  "sources": [
+   {
+    "label": "講義例題（未標年度） 講義 第第二章p.15題",
+    "subject": "講義",
+    "year": "講義例題（未標年度）",
+    "qno": "第二章p.15"
+   }
+  ]
+ },
+ {
+  "year": "講義例題（未標年度）",
+  "subject": "講義",
+  "qno": "第二章p.18",
+  "chapter": [
+   2
+  ],
+  "stem": "根據艾里克森(E. H. Erikson)的心理社會發展理論，國小學童的發展任務是什麼？",
+  "group_text": "",
+  "options": [
+   "勤奮進取對自貶自卑",
+   "自我統合對角色混亂",
+   "信任對不信任",
+   "性潛伏期"
+  ],
+  "answer": "A",
+  "answer_source": "講義標示",
+  "concept": "艾瑞克森：國小階段任務",
+  "ref_file": "第二章理論與研究 (1).pptx p.17-18",
+  "verified": false,
+  "note": "",
+  "src_label": "講義例題（未標年度） 講義 第第二章p.18題",
+  "id": "Q099",
+  "explanation": {
+   "right": "國小學童（約6歲~青春期）的核心任務是勤奮進取 vs. 自貶自卑。",
+   "wrong": {
+    "B": "自我統合 vs. 角色混亂屬青春期。",
+    "C": "信任 vs. 不信任屬0~1歲。",
+    "D": "性潛伏期是佛洛伊德的階段名稱，不是艾瑞克森的危機。"
+   },
+   "tip": "國小＝勤奮。"
+  },
+  "sources": [
+   {
+    "label": "講義例題（未標年度） 講義 第第二章p.18題",
+    "subject": "講義",
+    "year": "講義例題（未標年度）",
+    "qno": "第二章p.18"
+   }
+  ]
+ },
+ {
+  "year": "104（講義標示）",
+  "subject": "講義",
+  "qno": "第二章p.28-1",
+  "chapter": [
+   2
+  ],
+  "stem": "依據此方法的原則，黃老師首先應實施的步驟下列何者較適當？",
+  "group_text": "小明有發言焦慮的問題，黃老師依據「反制約」(counterconditioning)的方法，嘗試系統性地協助他降低焦慮。",
+  "options": [
+   "建立焦慮階層表",
+   "選擇適當的增強物",
+   "進行整體壓力評估",
+   "劃分懲罰與增強步驟"
+  ],
+  "answer": "A",
+  "answer_source": "講義標示",
+  "concept": "反制約：系統減敏法的步驟",
+  "ref_file": "反制約及系統減敏法.pptx；第二章理論與研究 (1).pptx p.28",
+  "verified": false,
+  "note": "",
+  "src_label": "104（講義標示） 講義 第第二章p.28-1題",
+  "id": "Q100",
+  "explanation": {
+   "right": "依反制約（系統減敏法）：先建立焦慮階層表，再學習放鬆，最後由低焦慮到高焦慮逐級配對。",
+   "wrong": {
+    "B": "選擇增強物屬操作制約的做法。",
+    "C": "整體壓力評估不是此方法的首要步驟。",
+    "D": "劃分懲罰與增強不屬反制約。"
+   },
+   "tip": "減敏三步：階層表→放鬆訓練→逐級暴露。"
+  },
+  "sources": [
+   {
+    "label": "104（講義標示） 講義 第第二章p.28-1題",
+    "subject": "講義",
+    "year": "104（講義標示）",
+    "qno": "第二章p.28-1"
+   }
+  ]
+ },
+ {
+  "year": "104（講義標示）",
+  "subject": "講義",
+  "qno": "第二章p.28-2",
+  "chapter": [
+   2
+  ],
+  "stem": "黃老師所運用的方法係依據下列何種學習原理？",
+  "group_text": "小明有發言焦慮的問題，黃老師依據「反制約」(counterconditioning)的方法，嘗試系統性地協助他降低焦慮。",
+  "options": [
+   "社會制約",
+   "替代制約",
+   "古典制約",
+   "操作制約"
+  ],
+  "answer": "C",
+  "answer_source": "講義標示",
+  "concept": "反制約＝古典制約的應用",
+  "ref_file": "反制約及系統減敏法.pptx；第二章理論與研究 (1).pptx p.27-28",
+  "verified": false,
+  "note": "",
+  "src_label": "104（講義標示） 講義 第第二章p.28-2題",
+  "id": "Q101",
+  "explanation": {
+   "right": "反制約把引發焦慮的刺激改與放鬆配對，是古典制約的原理。",
+   "wrong": {
+    "A": "「社會制約」不是標準學習原理名稱。",
+    "B": "「替代制約」不是標準學習原理名稱（替代學習屬社會學習論）。",
+    "D": "操作制約處理的是行為與後果的關係。"
+   },
+   "tip": "刺激配對＝古典制約；行為後果＝操作制約。"
+  },
+  "sources": [
+   {
+    "label": "104（講義標示） 講義 第第二章p.28-2題",
+    "subject": "講義",
+    "year": "104（講義標示）",
+    "qno": "第二章p.28-2"
+   }
+  ]
+ },
+ {
+  "year": "97（講義標示）",
+  "subject": "講義",
+  "qno": "第二章p.35",
+  "chapter": [
+   2
+  ],
+  "stem": "小學二年級的小鈴每次打她的弟弟，小鈴的父母就會讓她面壁思過，希望小鈴不會再打弟弟。這種方式是根據下列哪一種原則？",
+  "group_text": "",
+  "options": [
+   "操作制約",
+   "古典制約",
+   "社會學習",
+   "認知學習"
+  ],
+  "answer": "A",
+  "answer_source": "講義標示",
+  "concept": "操作制約：懲罰",
+  "ref_file": "第二章理論與研究 (1).pptx p.30-35；古典和操作制約的實例比較.docx",
+  "verified": false,
+  "note": "",
+  "src_label": "97（講義標示） 講義 第第二章p.35題",
+  "id": "Q102",
+  "explanation": {
+   "right": "行為（打弟弟）後給予後果（面壁思過）以減少該行為，是操作制約的懲罰。",
+   "wrong": {
+    "B": "古典制約是刺激與刺激的配對。",
+    "C": "社會學習是觀察模仿。",
+    "D": "認知學習強調理解與訊息處理。"
+   },
+   "tip": "行為→後果→行為改變＝操作制約。"
+  },
+  "sources": [
+   {
+    "label": "97（講義標示） 講義 第第二章p.35題",
+    "subject": "講義",
+    "year": "97（講義標示）",
+    "qno": "第二章p.35"
+   }
+  ]
+ },
+ {
+  "year": "講義例題（未標年度）",
+  "subject": "講義",
+  "qno": "第二章p.48",
+  "chapter": [
+   2,
+   7
+  ],
+  "stem": "「思考仍有些自我中心，但是開始逐漸理解他人的觀點，只是仍會因認知的不成熟而產生不合邏輯的觀念。」上述說明主要是生命發展那時期的認知發展特徵？",
+  "group_text": "",
+  "options": [
+   "感覺動作期",
+   "前運思期",
+   "具體運思期",
+   "形式運思期"
+  ],
+  "answer": "B",
+  "answer_source": "講義標示",
+  "concept": "皮亞傑：前運思期",
+  "ref_file": "第二章理論與研究 (1).pptx p.47-48",
+  "verified": false,
+  "note": "",
+  "src_label": "講義例題（未標年度） 講義 第第二章p.48題",
+  "id": "Q103",
+  "explanation": {
+   "right": "自我中心、逐漸理解他人觀點、思考仍不合邏輯，是前運思期（約2~7歲）。",
+   "wrong": {
+    "A": "感覺動作期靠感覺與動作認識世界。",
+    "C": "具體運思期已能邏輯思考。",
+    "D": "形式運思期能抽象推理。"
+   },
+   "tip": "前運思：自我中心＋不合邏輯。"
+  },
+  "sources": [
+   {
+    "label": "講義例題（未標年度） 講義 第第二章p.48題",
+    "subject": "講義",
+    "year": "講義例題（未標年度）",
+    "qno": "第二章p.48"
+   }
+  ]
+ },
+ {
+  "year": "講義例題（未標年度）",
+  "subject": "講義",
+  "qno": "第六章p.18",
+  "chapter": [
+   6
+  ],
+  "stem": "在陌生情境測驗中，當嬰兒與媽媽重聚時，表現出動作茫然而僵硬，或是會往媽媽靠近，卻在媽媽走近時突然移開，反映出嬰兒對於是否該接近或逃避照顧者的困惑，研究將之分類為下列哪一種依附型？",
+  "group_text": "",
+  "options": [
+   "安全型依附(secure attachment)",
+   "抗拒型依附(resistant attachment)",
+   "矛盾（抗拒）依附",
+   "錯亂型依附"
+  ],
+  "answer": "D",
+  "answer_source": "講義標示",
+  "concept": "依附類型：混亂（錯亂）型",
+  "ref_file": "第六章三歲前的心理社會發展.pptx p.15、18；依附類型整理.docx",
+  "verified": false,
+  "note": "選項(B)與(C)語意重疊，為講義原樣。",
+  "src_label": "講義例題（未標年度） 講義 第第六章p.18題",
+  "id": "Q104",
+  "explanation": {
+   "right": "重聚時茫然、僵硬、矛盾行為，是混亂（紊亂、錯亂）型依附。",
+   "wrong": {
+    "A": "安全型：高興歡迎、容易安撫。",
+    "B": "抗拒型即焦慮矛盾型，一方面黏人一方面憤怒。",
+    "C": "矛盾（抗拒）依附與選項B同屬一類，行為特徵是愛憎矛盾而非茫然。"
+   },
+   "tip": "前後不一致、不知要靠近還是離開＝混亂型。"
+  },
+  "sources": [
+   {
+    "label": "講義例題（未標年度） 講義 第第六章p.18題",
+    "subject": "講義",
+    "year": "講義例題（未標年度）",
+    "qno": "第六章p.18"
+   }
+  ]
+ },
+ {
+  "year": "101（新北市教甄，講義標示）",
+  "subject": "講義",
+  "qno": "第六章p.19",
+  "chapter": [
+   6
+  ],
+  "stem": "幼兒對於母親離開時，視而不見，並無特別的喜悅或焦慮，母親回來時也不喜歡被抱，這是下列何種情緒的表現？",
+  "group_text": "",
+  "options": [
+   "矛盾依附",
+   "安全依附",
+   "逃避型依附(avoidant attachment)",
+   "紊亂型依附(disorganized/disoriented attachment)"
+  ],
+  "answer": "C",
+  "answer_source": "講義標示",
+  "concept": "依附類型：逃避型",
+  "ref_file": "第六章三歲前的心理社會發展.pptx p.19；依附類型整理.docx",
+  "verified": false,
+  "note": "來源為講義標示的新北市101學年度國小暨幼稚園教師甄選，答案為講義標示，未核對官方公告。",
+  "src_label": "101（新北市教甄，講義標示） 講義 第第六章p.19題",
+  "id": "Q105",
+  "explanation": {
+   "right": "母親離開不理會、回來也不親近，是逃避型依附。",
+   "wrong": {
+    "A": "矛盾依附：分離時焦慮、重聚時又黏又氣。",
+    "B": "安全依附：分離時抗議、重聚時高興歡迎。",
+    "D": "紊亂型：行為前後矛盾、茫然。"
+   },
+   "tip": "逃避型＝不理你；矛盾型＝又愛又氣。"
+  },
+  "sources": [
+   {
+    "label": "101（新北市教甄，講義標示） 講義 第第六章p.19題",
+    "subject": "講義",
+    "year": "101（新北市教甄，講義標示）",
+    "qno": "第六章p.19"
+   }
+  ]
+ },
+ {
+  "year": "97（講義標示）",
+  "subject": "講義",
+  "qno": "第七章p.18",
+  "chapter": [
+   2,
+   7
+  ],
+  "stem": "在保留概念的實驗中，小佩認為，將果汁從原來的矮胖杯子倒入細長杯子當中，雖然外觀看來不同，但是實際上兩杯果汁一樣多，因為果汁既沒有增加，也沒有減少。她的解釋屬於下列何種概念？",
+  "group_text": "",
+  "options": [
+   "同一性",
+   "可逆性",
+   "補償性",
+   "整合性"
+  ],
+  "answer": "A",
+  "answer_source": "講義標示",
+  "concept": "保留概念：同一性",
+  "ref_file": "第七章兒童期早期的生理與認知發展.pptx p.14-18",
+  "verified": false,
+  "note": "",
+  "src_label": "97（講義標示） 講義 第第七章p.18題",
+  "id": "Q106",
+  "explanation": {
+   "right": "「既沒有增加也沒有減少」是同一性（identity）：不加不減，量就沒變。",
+   "wrong": {
+    "B": "可逆性：把水倒回原杯就會一樣。",
+    "C": "補償性：杯子變細但變高，高度與寬度互相補償。",
+    "D": "「整合性」不是保留概念的三種推理。"
+   },
+   "tip": "同一性：沒增沒減；可逆性：倒回去；補償性：高↑寬↓。"
+  },
+  "sources": [
+   {
+    "label": "97（講義標示） 講義 第第七章p.18題",
+    "subject": "講義",
+    "year": "97（講義標示）",
+    "qno": "第七章p.18"
+   }
+  ]
+ },
+ {
+  "year": "教檢素養導向範例試題",
+  "subject": "講義",
+  "qno": "明毅-問題一",
+  "chapter": [
+   2
+  ],
+  "stem": "10歲的明毅為國小四年級男學生，因為特質較為陰柔，長期遭受班上某些特定同學在FB留言以不堪入目的字眼謾罵，因此變得安靜退縮。總是覺得自己很差勁，沒有任何同學喜歡自己，躲在教室角落且不敢正視他人。請問根據艾瑞克森(Erikson)的心理社會理論，明毅正經歷哪一個階段的發展任務？",
+  "group_text": "",
+  "options": [
+   "親密與孤離(intimacy vs. isolation)",
+   "勤奮與自卑(industry vs. inferiority)",
+   "自主與羞愧懷疑(autonomy vs. shame and doubt)",
+   "自我認同與角色混淆(identity vs. role confusion)"
+  ],
+  "answer": "B",
+  "answer_source": "講義標示",
+  "concept": "艾瑞克森：勤奮 vs. 自卑",
+  "ref_file": "教檢素養導向範例試題分析.pptx p.5、10（詳見第二章簡報）",
+  "verified": false,
+  "note": "教檢素養導向範例試題（官方範例題）；選項答案依講義詳解標示。",
+  "src_label": "教檢素養導向範例試題 講義 第明毅-問題一題",
+  "id": "Q107",
+  "explanation": {
+   "right": "10歲屬國小階段，核心危機為勤奮與自卑；明毅覺得自己很差勁，是自卑一端。",
+   "wrong": {
+    "A": "親密與孤離屬成年早期。",
+    "C": "自主與羞愧懷疑屬1~3歲。",
+    "D": "自我認同與角色混淆屬青春期。"
+   },
+   "tip": "國小＝勤奮 vs. 自卑。"
+  },
+  "sources": [
+   {
+    "label": "教檢素養導向範例試題 講義 第明毅-問題一題",
+    "subject": "講義",
+    "year": "教檢素養導向範例試題",
+    "qno": "明毅-問題一"
+   }
+  ]
+ }
+]</script>
+<script>
+"use strict";
+var Q=JSON.parse(document.getElementById('data').textContent);
+var CH={1:'第1章 緒論',2:'第2章 理論與研究',3:'第3章 發展基礎與腦部',4:'第4章 三歲前的生理發展',5:'第5章 三歲前的認知發展',6:'第6章 三歲前的心理社會發展',7:'第7章 兒童期早期生理與認知'};
+var LS='cdq_v1', mem={};
+function load(){try{var s=localStorage.getItem(LS);if(s)return JSON.parse(s)}catch(e){}return mem.s||{ans:{},mocks:[]}}
+function save(){try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){mem.s=S}}
+var S=load(); if(!S.ans)S.ans={}; if(!S.mocks)S.mocks=[];
+(function(){var t='light';try{t=localStorage.getItem('cdq_theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch(e){}
+ document.documentElement.setAttribute('data-theme',t);
+ document.getElementById('thm').onclick=function(){var n=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('cdq_theme',n)}catch(e){}this.textContent=n==='dark'?'☀️ 淺色':'🌙 深色'}})();
+var $=document.getElementById.bind(document), app=$('app');
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+var L='ABCD';
+var cfg={chs:[1,2,3,4,5,6,7],year:'',subj:'',ver:false,n:0};
+var run=null;
+function go(v){if(v==='home')home()}
+function rec(q,ok){var a=S.ans[q.id]||{c:0,w:0};if(ok)a.c++;else a.w++;a.last=ok;S.ans[q.id]=a;save()}
+function pct(a,b){return b?Math.round(a/b*100)+'%':'—'}
+function home(){
+ run=null;
+ var ids=Object.keys(S.ans),tc=0,tw=0,wb=0;ids.forEach(function(i){var a=S.ans[i];tc+=a.c;tw+=a.w;if(a.last===false)wb++});
+ var years={},subj={};Q.forEach(function(q){years[q.year]=(years[q.year]||0)+1;subj[q.subject]=(subj[q.subject]||0)+1});
+ var h='<div class="card c1"><h2>目前進度</h2><div class="stats"><div class="stat"><b>'+Q.length+'</b>題庫總題數</div><div class="stat"><b>'+ids.length+'</b>已作答題數</div><div class="stat"><b>'+pct(tc,tc+tw)+'</b>累計正確率</div><div class="stat"><b>'+wb+'</b>錯題本</div></div></div>';
+ h+='<div class="card c2"><h2>章節題數與正確率</h2><table><tr><th>章節</th><th>題數</th><th>已答</th><th>正確率</th></tr>';
+ for(var c=1;c<=7;c++){var qs=Q.filter(function(q){return q.chapter.indexOf(c)>=0}),ac=0,aw=0,an=0;qs.forEach(function(q){var a=S.ans[q.id];if(a){an++;ac+=a.c;aw+=a.w}});
+  h+='<tr><td>'+CH[c]+'</td><td>'+qs.length+'</td><td>'+an+'</td><td>'+pct(ac,ac+aw)+'</td></tr>'}
+ h+='</table><p class="muted">題目可同時屬於多章，各章題數加總會大於總題數。</p></div>';
+ h+='<div class="card c3"><h2>年度與科目題數</h2><div>'+Object.keys(years).sort().map(function(y){return '<span class="tag">'+esc(y)+'：'+years[y]+'</span>'}).join('')+'</div><div style="margin-top:6px">'+Object.keys(subj).map(function(y){return '<span class="tag src">'+esc(y)+'：'+subj[y]+'</span>'}).join('')+'</div></div>';
+ h+='<div class="card"><h2>章節練習</h2><div class="row" id="chs">'+[1,2,3,4,5,6,7].map(function(c){return '<span class="chip'+(cfg.chs.indexOf(c)>=0?' on':'')+'" data-c="'+c+'">'+CH[c].split(' ')[0]+'</span>'}).join('')+'</div>';
+ h+='<div class="row" style="margin-top:10px"><label>年度 <select id="fy"><option value="">全部</option>'+Object.keys(years).sort().map(function(y){return '<option'+(cfg.year===y?' selected':'')+' value="'+esc(y)+'">'+esc(y)+'</option>'}).join('')+'</select></label><label>科目 <select id="fs"><option value="">全部</option>'+Object.keys(subj).map(function(y){return '<option'+(cfg.subj===y?' selected':'')+' value="'+esc(y)+'">'+esc(y)+'</option>'}).join('')+'</select></label><label class="chip'+(cfg.ver?' on':'')+'" id="fv">只練已驗證題</label></div>';
+ h+='<div class="row" style="margin-top:12px"><button class="mint" id="gp">開始練習</button><button class="coral" id="gm">模擬期中考（35題）</button><button class="sky" id="gw">錯題本（'+wb+'）</button></div></div>';
+ h+='<div class="card"><h2>模擬考紀錄</h2>'+(S.mocks.length?'<table><tr><th>時間</th><th>得分</th><th>用時</th></tr>'+S.mocks.slice(-5).reverse().map(function(m){return '<tr><td>'+esc(m.t)+'</td><td>'+m.s+' / '+m.n+'</td><td>'+Math.floor(m.sec/60)+' 分</td></tr>'}).join('')+'</table>':'<p class="muted">尚未作答。</p>')+'<div style="margin-top:8px"><button class="ghost" id="rs">清除所有紀錄</button></div></div>';
+ app.innerHTML=h;
+ Array.prototype.forEach.call(document.querySelectorAll('#chs .chip'),function(e){e.onclick=function(){var c=+e.dataset.c,i=cfg.chs.indexOf(c);if(i>=0)cfg.chs.splice(i,1);else cfg.chs.push(c);e.classList.toggle('on')}});
+ $('fy').onchange=function(){cfg.year=this.value};$('fs').onchange=function(){cfg.subj=this.value};
+ $('fv').onclick=function(){cfg.ver=!cfg.ver;this.classList.toggle('on')};
+ $('gp').onclick=function(){var p=Q.filter(function(q){return q.chapter.some(function(c){return cfg.chs.indexOf(c)>=0})&&(!cfg.year||q.year===cfg.year)&&(!cfg.subj||q.subject===cfg.subj)&&(!cfg.ver||q.verified)});if(!p.length){alert('這組條件沒有題目');return}start('practice',shuf(p))};
+ $('gm').onclick=function(){var p=Q.filter(function(q){return q.verified}),r=Q.filter(function(q){return !q.verified});var pick=shuf(p).slice(0,35);if(pick.length<35)pick=pick.concat(shuf(r).slice(0,35-pick.length));start('mock',shuf(pick))};
+ $('gw').onclick=function(){var p=Q.filter(function(q){return S.ans[q.id]&&S.ans[q.id].last===false});if(!p.length){alert('目前沒有錯題');return}start('wrong',shuf(p))};
+ $('rs').onclick=function(){if(confirm('確定清除所有作答紀錄？')){S={ans:{},mocks:[]};save();home()}};
+}
+function start(mode,list){
+ run={mode:mode,list:list.map(function(q){var o=shuf([0,1,2,3]);return{q:q,ord:o,pick:null,done:false}}),i:0,t0:Date.now(),fin:false};
+ if(mode==='mock'){run.timer=setInterval(function(){var e=$('tm');if(e)e.textContent=fmt(Math.floor((Date.now()-run.t0)/1000))},1000)}
+ show();
+}
+function fmt(s){var m=Math.floor(s/60);return (m<10?'0':'')+m+':'+(s%60<10?'0':'')+s%60}
+function qhtml(it,review){
+ var q=it.q,h='';
+ h+='<div>'+q.chapter.map(function(c){return '<span class="tag">'+CH[c].split(' ')[0]+'</span>'}).join('')+(q.verified?'':'<span class="tag warn">待查證／依課本推定</span>')+'</div>';
+ if(q.group_text)h+='<div class="grp">'+esc(q.group_text)+'</div>';
+ h+='<div class="stem">'+esc(q.stem)+'</div>';
+ var ai=q.answer.charCodeAt(0)-65;
+ it.ord.forEach(function(oi,k){var cls='opt';
+  if(review||it.done){if(oi===ai)cls+=' right';else if(it.pick===k)cls+=' wrong'}else if(it.pick===k)cls+=' sel';
+  h+='<button class="'+cls+'" data-k="'+k+'">'+L[k]+'．'+esc(q.options[oi])+'</button>'});
+ if(review||it.done)h+=exp(it);
+ return h;
+}
+function exp(it){
+ var q=it.q,e=q.explanation,ai=q.answer.charCodeAt(0)-65,k=it.ord.indexOf(ai);
+ var h='<div class="exp"><p><b>正確答案：'+L[k]+'</b>（'+esc(q.options[ai])+'）　<span class="tag src">'+esc(q.answer_source)+'</span></p>';
+ h+='<p>'+esc(e.right)+'</p>';
+ it.ord.forEach(function(oi,kk){if(oi!==ai&&e.wrong&&e.wrong[String.fromCharCode(65+oi)])h+='<p>('+L[kk]+') '+esc(e.wrong[String.fromCharCode(65+oi)])+'</p>'});
+ if(e.tip)h+='<p class="tip">'+esc(e.tip)+'</p>';
+ h+='<p class="muted">概念：'+esc(q.concept)+'<br>講義：'+esc(q.ref_file)+'<br>出處：'+q.sources.map(function(s){return esc(s.label)}).join('；')+(q.note?'<br>備註：'+esc(q.note):'')+(q.scope_note?'<br>範圍說明：'+esc(q.scope_note):'')+'</p></div>';
+ return h;
+}
+function show(){
+ var r=run,it=r.list[r.i],mock=r.mode==='mock';
+ var h='<div class="card"><div class="row" style="justify-content:space-between"><b>'+({practice:'章節練習',mock:'模擬期中考',wrong:'錯題本'})[r.mode]+'　'+(r.i+1)+' / '+r.list.length+'</b>'+(mock?'<span class="timer" id="tm">'+fmt(Math.floor((Date.now()-r.t0)/1000))+'</span>':'')+'<button class="ghost" id="ex">離開</button></div>';
+ h+='<div class="bar" style="margin:8px 0"><i style="width:'+((r.i+1)/r.list.length*100)+'%"></i></div>';
+ if(!mock)h+='<div class="muted">出處：'+esc(it.q.sources[0].label)+'</div>';
+ h+='<div id="qb">'+qhtml(it,false)+'</div>';
+ h+='<div class="nav"><button id="pv" '+(r.i?'':'disabled')+'>上一題</button>'+(mock&&r.i===r.list.length-1?'<button class="coral" id="sb">交卷</button>':'<button class="mint" id="nx" '+(r.i===r.list.length-1?'disabled':'')+'>下一題</button>')+'</div></div>';
+ if(!mock&&r.i===r.list.length-1)h+='<div class="card c2"><button id="fin">結束並回首頁</button></div>';
+ app.innerHTML=h;bind();
+ $('ex').onclick=function(){if(confirm('離開目前作答？')){clearInterval(r.timer);home()}};
+ $('pv').onclick=function(){r.i--;show()};
+ if($('nx'))$('nx').onclick=function(){r.i++;show()};
+ if($('fin'))$('fin').onclick=home;
+ if($('sb'))$('sb').onclick=submit;
+}
+function bind(){
+ var r=run,it=r.list[r.i],mock=r.mode==='mock';
+ Array.prototype.forEach.call(document.querySelectorAll('.opt'),function(b){b.onclick=function(){
+  if(it.done)return;it.pick=+b.dataset.k;
+  if(mock){$('qb').innerHTML=qhtml(it,false);bind();return}
+  it.done=true;var ok=it.ord[it.pick]===it.q.answer.charCodeAt(0)-65;rec(it.q,ok);$('qb').innerHTML=qhtml(it,false);bind()}});
+}
+function submit(){
+ var r=run,un=r.list.filter(function(x){return x.pick===null}).length;
+ if(un&&!confirm('還有 '+un+' 題未作答，確定交卷？'))return;
+ clearInterval(r.timer);var sec=Math.floor((Date.now()-r.t0)/1000),sc=0,pc={};
+ r.list.forEach(function(x){var ok=x.pick!==null&&x.ord[x.pick]===x.q.answer.charCodeAt(0)-65;if(ok)sc++;rec(x.q,ok);x.q.chapter.forEach(function(c){pc[c]=pc[c]||[0,0];pc[c][1]++;if(ok)pc[c][0]++})});
+ var d=new Date();S.mocks.push({t:d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate()+' '+d.getHours()+':'+('0'+d.getMinutes()).slice(-2),s:sc,n:r.list.length,sec:sec});save();
+ var h='<div class="card c3"><h2>成績：'+sc+' / '+r.list.length+'（'+pct(sc,r.list.length)+'）　用時 '+fmt(sec)+'</h2><table><tr><th>章節</th><th>答對／題數</th><th>正確率</th></tr>'+Object.keys(pc).sort().map(function(c){return '<tr><td>'+CH[c]+'</td><td>'+pc[c][0]+' / '+pc[c][1]+'</td><td>'+pct(pc[c][0],pc[c][1])+'</td></tr>'}).join('')+'</table></div>';
+ r.list.forEach(function(x,i){var ok=x.pick!==null&&x.ord[x.pick]===x.q.answer.charCodeAt(0)-65;h+='<div class="card '+(ok?'c2':'c4')+'"><b>第'+(i+1)+'題　'+(ok?'答對':(x.pick===null?'未作答':'答錯'))+'</b><div class="muted">出處：'+esc(x.q.sources[0].label)+'</div>'+qhtml(x,true)+'</div>'});
+ h+='<div class="card"><button onclick="home()">回首頁</button></div>';
+ app.innerHTML=h;window.scrollTo(0,0);
+ Array.prototype.forEach.call(document.querySelectorAll('.opt'),function(b){b.disabled=true});
+}
+home();
+</script>
+</body>
+</html>
