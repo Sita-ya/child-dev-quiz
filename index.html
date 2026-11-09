@@ -3765,7 +3765,7 @@ select,input[type=number]{font:inherit;color:var(--ink);background:var(--card);b
    "史坦伯格"
   ],
   "answer": "A",
-  "answer_source": "依課本推定",
+  "answer_source": "使用者核對（未取得官方答案卷）",
   "concept": "皮亞傑：成熟與適應",
   "ref_file": "第二章理論與研究 (1).pptx p.43-47；兒童發展_腦部考古題(無解答版).pptx 第11題",
   "verified": false,
@@ -4016,7 +4016,7 @@ select,input[type=number]{font:inherit;color:var(--ink);background:var(--card);b
    "胼胝體的主要功能是控制意識形態和反射"
   ],
   "answer": "C",
-  "answer_source": "講義標示",
+  "answer_source": "使用者核對（未取得官方答案卷）",
   "concept": "胼胝體：連結左右腦半球",
   "ref_file": "胼胝體.pptx（講義標示答案C）；兒童發展_腦部考古題(無解答版).pptx 第17題",
   "verified": false,
@@ -4058,7 +4058,7 @@ select,input[type=number]{font:inherit;color:var(--ink);background:var(--card);b
    "視覺、聽覺區神經細胞的突觸密度在學齡期前便已達到顛峰"
   ],
   "answer": "C",
-  "answer_source": "講義標示",
+  "answer_source": "使用者核對（未取得官方答案卷）",
   "concept": "腦神經系統發展",
   "ref_file": "腦側化.pptx；神經細胞發展.docx（講義標示答案C，104年教檢國小）",
   "verified": false,
@@ -4557,13 +4557,14 @@ function qhtml(it,review){
  if(review||it.done)h+=exp(it);
  return h;
 }
+function fx(t,it){return String(t==null?'':t).replace(/([（(])\s*([A-D])\s*([）)])|選項\s*([A-D])/g,function(m,a,b,c,d){var k=it.ord.indexOf((b||d).charCodeAt(0)-65);var l=L[k];return d?'選項'+l:a+l+c})}
 function exp(it){
  var q=it.q,e=q.explanation,ai=q.answer.charCodeAt(0)-65,k=it.ord.indexOf(ai);
  var h='<div class="exp"><p><b>正確答案：'+L[k]+'</b>（'+esc(q.options[ai])+'）　<span class="tag src">'+esc(q.answer_source)+'</span></p>';
- h+='<p>'+esc(e.right)+'</p>';
- it.ord.forEach(function(oi,kk){if(oi!==ai&&e.wrong&&e.wrong[String.fromCharCode(65+oi)])h+='<p>('+L[kk]+') '+esc(e.wrong[String.fromCharCode(65+oi)])+'</p>'});
- if(e.tip)h+='<p class="tip">'+esc(e.tip)+'</p>';
- h+='<p class="muted">概念：'+esc(q.concept)+'<br>講義：'+esc(q.ref_file)+'<br>出處：'+q.sources.map(function(s){return esc(s.label)}).join('；')+(q.note?'<br>備註：'+esc(q.note):'')+(q.scope_note?'<br>範圍說明：'+esc(q.scope_note):'')+'</p></div>';
+ h+='<p>'+esc(fx(e.right,it))+'</p>';
+ it.ord.forEach(function(oi,kk){if(oi!==ai&&e.wrong&&e.wrong[String.fromCharCode(65+oi)])h+='<p>('+L[kk]+') '+esc(fx(e.wrong[String.fromCharCode(65+oi)],it))+'</p>'});
+ if(e.tip)h+='<p class="tip">'+esc(fx(e.tip,it))+'</p>';
+ h+='<p class="muted">概念：'+esc(q.concept)+'<br>講義：'+esc(q.ref_file)+'<br>出處：'+q.sources.map(function(s){return esc(s.label)}).join('；')+(q.note?'<br>備註：'+esc(fx(q.note,it)):'')+(q.scope_note?'<br>範圍說明：'+esc(fx(q.scope_note,it)):'')+'</p></div>';
  return h;
 }
 function show(){
